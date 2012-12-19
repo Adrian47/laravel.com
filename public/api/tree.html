@@ -1,97 +1,145 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Tree - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
 
-	<title>Tree</title>
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="resources/combined.js?2162224609"></script>
-	<script type="text/javascript" src="elementlist.js?3519551823"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1022895712" />
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
 
-</head>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
 
-<body>
-<div class="laravel-header">
-	<img src="http://beta.laravel.com/img/laravel.png" alt="" />
-</div>
-<div class="col-container">
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
 
-		<div id="groups">
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="main"><a href="namespace-Laravel.html">Laravel</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.html">Cache</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.Drivers.html">Drivers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.html">CLI</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.Providers.html">Providers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Migrate.html">Migrate</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Session.html">Session</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Test.html">Test</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Database.html">Database</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Connectors.html">Connectors</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Database.Query.html">Query</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Query.Grammars.html">Grammars</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.html">Schema</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.Grammars.html">Grammars</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Routing.html">Routing</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Session.html">Session</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Session.Drivers.html">Drivers</a>
-						</li>
-							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
-				<li><a href="namespace-PHP.html">PHP</a>
-						</li>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
 			</ul>
-		</div>
 
 		<hr />
 
-		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Laravel.Asset.html">Laravel\Asset</a></li>
 				<li><a href="class-Laravel.Asset_Container.html">Laravel\Asset_Container</a></li>
 				<li><a href="class-Laravel.Auth.html">Laravel\Auth</a></li>
+				<li><a href="class-Laravel.Auth.Drivers.Driver.html">Laravel\Auth\Drivers\Driver</a></li>
+				<li><a href="class-Laravel.Auth.Drivers.Eloquent.html">Laravel\Auth\Drivers\Eloquent</a></li>
+				<li><a href="class-Laravel.Auth.Drivers.Fluent.html">Laravel\Auth\Drivers\Fluent</a></li>
 				<li><a href="class-Laravel.Autoloader.html">Laravel\Autoloader</a></li>
 				<li><a href="class-Laravel.Blade.html">Laravel\Blade</a></li>
 				<li><a href="class-Laravel.Bundle.html">Laravel\Bundle</a></li>
@@ -101,7 +149,9 @@
 				<li><a href="class-Laravel.Cache.Drivers.Driver.html">Laravel\Cache\Drivers\Driver</a></li>
 				<li><a href="class-Laravel.Cache.Drivers.File.html">Laravel\Cache\Drivers\File</a></li>
 				<li><a href="class-Laravel.Cache.Drivers.Memcached.html">Laravel\Cache\Drivers\Memcached</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Memory.html">Laravel\Cache\Drivers\Memory</a></li>
 				<li><a href="class-Laravel.Cache.Drivers.Redis.html">Laravel\Cache\Drivers\Redis</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Sectionable.html">Laravel\Cache\Drivers\Sectionable</a></li>
 				<li><a href="class-Laravel.CLI.Command.html">Laravel\CLI\Command</a></li>
 				<li><a href="class-Laravel.CLI.Tasks.Bundle.Bundler.html">Laravel\CLI\Tasks\Bundle\Bundler</a></li>
 				<li><a href="class-Laravel.CLI.Tasks.Bundle.Providers.Github.html">Laravel\CLI\Tasks\Bundle\Providers\Github</a></li>
@@ -126,11 +176,21 @@
 				<li><a href="class-Laravel.Database.Connectors.Postgres.html">Laravel\Database\Connectors\Postgres</a></li>
 				<li><a href="class-Laravel.Database.Connectors.SQLite.html">Laravel\Database\Connectors\SQLite</a></li>
 				<li><a href="class-Laravel.Database.Connectors.SQLServer.html">Laravel\Database\Connectors\SQLServer</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Pivot.html">Laravel\Database\Eloquent\Pivot</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Query.html">Laravel\Database\Eloquent\Query</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Belongs_To.html">Laravel\Database\Eloquent\Relationships\Belongs_To</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many.html">Laravel\Database\Eloquent\Relationships\Has_Many</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html">Laravel\Database\Eloquent\Relationships\Has_Many_And_Belongs_To</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_One.html">Laravel\Database\Eloquent\Relationships\Has_One</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_One_Or_Many.html">Laravel\Database\Eloquent\Relationships\Has_One_Or_Many</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html">Laravel\Database\Eloquent\Relationships\Relationship</a></li>
 				<li><a href="class-Laravel.Database.Expression.html">Laravel\Database\Expression</a></li>
 				<li><a href="class-Laravel.Database.Grammar.html">Laravel\Database\Grammar</a></li>
 				<li><a href="class-Laravel.Database.Query.html">Laravel\Database\Query</a></li>
 				<li><a href="class-Laravel.Database.Query.Grammars.Grammar.html">Laravel\Database\Query\Grammars\Grammar</a></li>
 				<li><a href="class-Laravel.Database.Query.Grammars.MySQL.html">Laravel\Database\Query\Grammars\MySQL</a></li>
+				<li><a href="class-Laravel.Database.Query.Grammars.SQLite.html">Laravel\Database\Query\Grammars\SQLite</a></li>
 				<li><a href="class-Laravel.Database.Query.Grammars.SQLServer.html">Laravel\Database\Query\Grammars\SQLServer</a></li>
 				<li><a href="class-Laravel.Database.Query.Join.html">Laravel\Database\Query\Join</a></li>
 				<li><a href="class-Laravel.Database.Schema.html">Laravel\Database\Schema</a></li>
@@ -154,6 +214,8 @@
 				<li><a href="class-Laravel.Memcached.html">Laravel\Memcached</a></li>
 				<li><a href="class-Laravel.Messages.html">Laravel\Messages</a></li>
 				<li><a href="class-Laravel.Paginator.html">Laravel\Paginator</a></li>
+				<li><a href="class-Laravel.Pluralizer.html">Laravel\Pluralizer</a></li>
+				<li><a href="class-Laravel.Profiling.Profiler.html">Laravel\Profiling\Profiler</a></li>
 				<li><a href="class-Laravel.Redirect.html">Laravel\Redirect</a></li>
 				<li><a href="class-Laravel.Redis.html">Laravel\Redis</a></li>
 				<li><a href="class-Laravel.Request.html">Laravel\Request</a></li>
@@ -168,8 +230,10 @@
 				<li><a href="class-Laravel.Session.Drivers.APC.html">Laravel\Session\Drivers\APC</a></li>
 				<li><a href="class-Laravel.Session.Drivers.Cookie.html">Laravel\Session\Drivers\Cookie</a></li>
 				<li><a href="class-Laravel.Session.Drivers.Database.html">Laravel\Session\Drivers\Database</a></li>
+				<li><a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a></li>
 				<li><a href="class-Laravel.Session.Drivers.File.html">Laravel\Session\Drivers\File</a></li>
 				<li><a href="class-Laravel.Session.Drivers.Memcached.html">Laravel\Session\Drivers\Memcached</a></li>
+				<li><a href="class-Laravel.Session.Drivers.Memory.html">Laravel\Session\Drivers\Memory</a></li>
 				<li><a href="class-Laravel.Session.Drivers.Redis.html">Laravel\Session\Drivers\Redis</a></li>
 				<li><a href="class-Laravel.Session.Payload.html">Laravel\Session\Payload</a></li>
 				<li><a href="class-Laravel.Str.html">Laravel\Str</a></li>
@@ -181,7 +245,6 @@
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a></li>
 				<li><a href="class-Laravel.Session.Drivers.Sweeper.html">Laravel\Session\Drivers\Sweeper</a></li>
 			</ul>
 
@@ -192,35 +255,29 @@
 			</ul>
 
 
-		</div>
-	</div>
-</div>
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
-	</form>
 
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-<span>Namespace</span>			</li>
-			<li>
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-			<li class="active">
-<span>Tree</span>			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+<span>Namespace</span>							</li>
+							<li>
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li class="active">
+<span>Tree</span>							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
 
 <div id="content">
 	<h1>Tree</h1>
@@ -249,6 +306,27 @@
 			</div>
 
 				</li>
+
+			<li><div class="notlast"><a href="class-Laravel.Auth.Drivers.Driver.html">Laravel\Auth\Drivers\Driver</a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="class-Laravel.Auth.Drivers.Eloquent.html">Laravel\Auth\Drivers\Eloquent</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Auth.Drivers.Fluent.html">Laravel\Auth\Drivers\Fluent</a>
+			
+			
+			</div>
+
+				</ul></li>
 
 			<li><div class="notlast"><a href="class-Laravel.Autoloader.html">Laravel\Autoloader</a>
 			
@@ -404,6 +482,20 @@
 
 				</li>
 
+			<li><div class="notlast"><a href="class-Laravel.Cache.Drivers.Redis.html">Laravel\Cache\Drivers\Redis</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Cache.Drivers.Sectionable.html">Laravel\Cache\Drivers\Sectionable</a>
+			
+			
+			</div>
+
+				<ul>
+
 			<li><div class="notlast"><a href="class-Laravel.Cache.Drivers.Memcached.html">Laravel\Cache\Drivers\Memcached</a>
 			
 			
@@ -411,12 +503,12 @@
 
 				</li>
 
-			<li class="last"><div class="last"><a href="class-Laravel.Cache.Drivers.Redis.html">Laravel\Cache\Drivers\Redis</a>
+			<li class="last"><div class="last"><a href="class-Laravel.Cache.Drivers.Memory.html">Laravel\Cache\Drivers\Memory</a>
 			
 			
 			</div>
 
-				</ul></li>
+				</ul></li></ul></li>
 
 			<li><div class="notlast"><a href="class-Laravel.Config.html">Laravel\Config</a>
 			
@@ -488,6 +580,69 @@
 
 				</ul></li>
 
+			<li><div class="notlast"><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Database.Eloquent.Pivot.html">Laravel\Database\Eloquent\Pivot</a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="class-Laravel.Database.Eloquent.Query.html">Laravel\Database\Eloquent\Query</a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html">Laravel\Database\Eloquent\Relationships\Relationship</a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="class-Laravel.Database.Eloquent.Relationships.Belongs_To.html">Laravel\Database\Eloquent\Relationships\Belongs_To</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html">Laravel\Database\Eloquent\Relationships\Has_Many_And_Belongs_To</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Database.Eloquent.Relationships.Has_One_Or_Many.html">Laravel\Database\Eloquent\Relationships\Has_One_Or_Many</a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many.html">Laravel\Database\Eloquent\Relationships\Has_Many</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Database.Eloquent.Relationships.Has_One.html">Laravel\Database\Eloquent\Relationships\Has_One</a>
+			
+			
+			</div>
+
+				</ul></li></ul></li></ul></li>
+
 			<li><div class="notlast"><a href="class-Laravel.Database.Expression.html">Laravel\Database\Expression</a>
 			
 			
@@ -516,7 +671,14 @@
 
 				</li>
 
-			<li class="last"><div class="last"><a href="class-Laravel.Database.Query.Grammars.SQLServer.html">Laravel\Database\Query\Grammars\SQLServer</a>
+			<li><div class="notlast"><a href="class-Laravel.Database.Query.Grammars.SQLServer.html">Laravel\Database\Query\Grammars\SQLServer</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Database.Query.Grammars.SQLite.html">Laravel\Database\Query\Grammars\SQLite</a>
 			
 			
 			</div>
@@ -684,6 +846,20 @@
 
 				</li>
 
+			<li><div class="notlast"><a href="class-Laravel.Pluralizer.html">Laravel\Pluralizer</a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="class-Laravel.Profiling.Profiler.html">Laravel\Profiling\Profiler</a>
+			
+			
+			</div>
+
+				</li>
+
 			<li><div class="notlast"><a href="class-Laravel.Redis.html">Laravel\Redis</a>
 			
 			
@@ -761,9 +937,14 @@
 
 				</li>
 
+			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>
+			
+			
+			</div>
+
+				<ul>
+
 			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.APC.html">Laravel\Session\Drivers\APC</a>
-			 implements 
-				<a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>
 			
 			
 			</div>
@@ -771,8 +952,6 @@
 				</li>
 
 			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Cookie.html">Laravel\Session\Drivers\Cookie</a>
-			 implements 
-				<a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>
 			
 			
 			</div>
@@ -781,8 +960,6 @@
 
 			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Database.html">Laravel\Session\Drivers\Database</a>
 			 implements 
-				<a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>, 
-			
 				<a href="class-Laravel.Session.Drivers.Sweeper.html">Laravel\Session\Drivers\Sweeper</a>
 			
 			
@@ -792,8 +969,6 @@
 
 			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.File.html">Laravel\Session\Drivers\File</a>
 			 implements 
-				<a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>, 
-			
 				<a href="class-Laravel.Session.Drivers.Sweeper.html">Laravel\Session\Drivers\Sweeper</a>
 			
 			
@@ -802,22 +977,25 @@
 				</li>
 
 			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Memcached.html">Laravel\Session\Drivers\Memcached</a>
-			 implements 
-				<a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>
 			
 			
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Redis.html">Laravel\Session\Drivers\Redis</a>
-			 implements 
-				<a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>
+			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Memory.html">Laravel\Session\Drivers\Memory</a>
 			
 			
 			</div>
 
 				</li>
+
+			<li class="last"><div class="last"><a href="class-Laravel.Session.Drivers.Redis.html">Laravel\Session\Drivers\Redis</a>
+			
+			
+			</div>
+
+				</ul></li>
 
 			<li><div class="notlast"><a href="class-Laravel.Session.Payload.html">Laravel\Session\Payload</a>
 			
@@ -870,13 +1048,6 @@
 <div class="tree">
 	<ul>
 
-			<li><div class="notlast"><a href="class-Laravel.Session.Drivers.Driver.html">Laravel\Session\Drivers\Driver</a>
-			
-			
-			</div>
-
-				</li>
-
 			<li class="last"><div class="last"><a href="class-Laravel.Session.Drivers.Sweeper.html">Laravel\Session\Drivers\Sweeper</a>
 			
 			
@@ -910,31 +1081,36 @@
 </div>
 </div>
 
+				</div>
 
-</div>
-</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<ul class="span7">
-				<li><a href="http://beta.laravel.com/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="http://forums.laravel.com">Forums</a></li>
-				<li><a href="http://bundles.laravel.com">Bundles</a></li>
-				<li><a href="http://laravel.com/docs">Learn</a></li>
-				<li class="download">
-					<a href="http://laravel.com/download">Download <i class="download"></i></a>
-				</li>
-			</ul>
-			<ul class="social span3 offset2">
-				<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
-				<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
-			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-</body>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
 </html>

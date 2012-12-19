@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\Console\Command\ListCommand - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Command.Command.html">Command</a></li>
+				<li><a href="class-Symfony.Component.Console.Command.HelpCommand.html">HelpCommand</a></li>
+				<li class="active"><a href="class-Symfony.Component.Console.Command.ListCommand.html">ListCommand</a></li>
+			</ul>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.Console.Command.html" title="Summary of Symfony\Component\Console\Command"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class ListCommand</h1>
+
+	<div class="description">
+	
+<p>ListCommand displays the list of all available commands for the
+application.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b>Symfony\Component\Console\Command\ListCommand</b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.Console.html">Console</a>\<a href="namespace-Symfony.Component.Console.Command.html">Command</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Command.ListCommand.html#22" title="Go to source code">vendor/Symfony/Component/Console/Command/ListCommand.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="configure" id="_configure">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configure">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.ListCommand.html#29" title="Go to source code">configure</a>( )</code>
+
+		<div class="description short">
+			
+<p>Configures the current command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configures the current command.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNativeDefinition" id="_getNativeDefinition">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNativeDefinition">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.ListCommand.html#59" title="Go to source code">getNativeDefinition</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the InputDefinition to be used to create XML and Text representations of
+this Command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the InputDefinition to be used to create XML and Text representations of
+this Command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code></code><br>An InputDefinition instance<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.ListCommand.html#67" title="Go to source code">execute</a>( <span><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a> <var>$input</var></span>, <span><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a> <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the current command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the current command.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code></code><br> An InputInterface instance</dd>
+					<dt><var>$output</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code></code><br> An OutputInterface instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>0 if everything went fine, or an error code<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-LogicException.html">LogicException</a></code></code><br>When this abstract method is not implemented<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Symfony.Component.Console.Command.Command.html#methods">Symfony\Component\Console\Command\Command</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Symfony.Component.Console.Command.Command.html#___construct">__construct()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_addArgument">addArgument()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_addOption">addOption()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_asText">asText()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_asXml">asXml()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getAliases">getAliases()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getApplication">getApplication()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getDefinition">getDefinition()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getDescription">getDescription()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getHelp">getHelp()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getHelper">getHelper()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getHelperSet">getHelperSet()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getName">getName()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getProcessedHelp">getProcessedHelp()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_getSynopsis">getSynopsis()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_ignoreValidationErrors">ignoreValidationErrors()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_initialize">initialize()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_interact">interact()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_isEnabled">isEnabled()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_run">run()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setAliases">setAliases()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setApplication">setApplication()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setCode">setCode()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setDefinition">setDefinition()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setDescription">setDescription()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setHelp">setHelp()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setHelperSet">setHelperSet()</a>, 
+<a href="class-Symfony.Component.Console.Command.Command.html#_setName">setName()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

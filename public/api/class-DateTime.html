@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class DateTime - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Closure.html">Closure</a></li>
+				<li class="active"><a href="class-DateTime.html">DateTime</a></li>
+				<li><a href="class-DOMDocument.html">DOMDocument</a></li>
+				<li><a href="class-DOMNode.html">DOMNode</a></li>
+				<li><a href="class-PDO.html">PDO</a></li>
+				<li><a href="class-PDOStatement.html">PDOStatement</a></li>
+				<li><a href="class-SplFileInfo.html">SplFileInfo</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-ArrayAccess.html">ArrayAccess</a></li>
+				<li><a href="class-Traversable.html">Traversable</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Exception.html">Exception</a></li>
+				<li><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></li>
+				<li><a href="class-LogicException.html">LogicException</a></li>
+				<li><a href="class-RuntimeException.html">RuntimeException</a></li>
+			</ul>
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-PHP.html" title="Summary of PHP"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class DateTime</h1>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		<b>PHP Extension:</b> <a href="http://php.net/manual/book.datetime.php" title="Go to PHP documentation">Date</a><br />
+		
+
+		<b>Documented at</b> <a href="http://php.net/manual/class.datetime.php" title="Go to PHP documentation">php.net</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="http://php.net/manual/datetime.construct.php" title="Go to PHP documentation">__construct</a>( <span> <var>$time</var></span>, <span> <var>$object</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__wakeup" id="___wakeup">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___wakeup">#</a>
+		<code><a href="http://php.net/manual/datetime.wakeup.php" title="Go to PHP documentation">__wakeup</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set_state" id="___set_state">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set_state">#</a>
+		<code><a href="http://php.net/manual/datetime.set-state.php" title="Go to PHP documentation">__set_state</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFromFormat" id="_createFromFormat">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFromFormat">#</a>
+		<code><a href="http://php.net/manual/datetime.createfromformat.php" title="Go to PHP documentation">createFromFormat</a>( <span> <var>$format</var></span>, <span> <var>$time</var></span>, <span> <var>$object</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastErrors" id="_getLastErrors">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastErrors">#</a>
+		<code><a href="http://php.net/manual/datetime.getlasterrors.php" title="Go to PHP documentation">getLastErrors</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format" id="_format">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format">#</a>
+		<code><a href="http://php.net/manual/datetime.format.php" title="Go to PHP documentation">format</a>( <span> <var>$format</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="modify" id="_modify">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_modify">#</a>
+		<code><a href="http://php.net/manual/datetime.modify.php" title="Go to PHP documentation">modify</a>( <span> <var>$modify</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code><a href="http://php.net/manual/datetime.add.php" title="Go to PHP documentation">add</a>( <span> <var>$interval</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sub" id="_sub">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sub">#</a>
+		<code><a href="http://php.net/manual/datetime.sub.php" title="Go to PHP documentation">sub</a>( <span> <var>$interval</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimezone" id="_getTimezone">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTimezone">#</a>
+		<code><a href="http://php.net/manual/datetime.gettimezone.php" title="Go to PHP documentation">getTimezone</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTimezone" id="_setTimezone">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTimezone">#</a>
+		<code><a href="http://php.net/manual/datetime.settimezone.php" title="Go to PHP documentation">setTimezone</a>( <span> <var>$timezone</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOffset" id="_getOffset">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOffset">#</a>
+		<code><a href="http://php.net/manual/datetime.getoffset.php" title="Go to PHP documentation">getOffset</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTime" id="_setTime">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTime">#</a>
+		<code><a href="http://php.net/manual/datetime.settime.php" title="Go to PHP documentation">setTime</a>( <span> <var>$hour</var></span>, <span> <var>$minute</var></span>, <span> <var>$second</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDate" id="_setDate">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDate">#</a>
+		<code><a href="http://php.net/manual/datetime.setdate.php" title="Go to PHP documentation">setDate</a>( <span> <var>$year</var></span>, <span> <var>$month</var></span>, <span> <var>$day</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setISODate" id="_setISODate">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setISODate">#</a>
+		<code><a href="http://php.net/manual/datetime.setisodate.php" title="Go to PHP documentation">setISODate</a>( <span> <var>$year</var></span>, <span> <var>$week</var></span>, <span> <var>$day</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTimestamp" id="_setTimestamp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTimestamp">#</a>
+		<code><a href="http://php.net/manual/datetime.settimestamp.php" title="Go to PHP documentation">setTimestamp</a>( <span> <var>$unixtimestamp</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimestamp" id="_getTimestamp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTimestamp">#</a>
+		<code><a href="http://php.net/manual/datetime.gettimestamp.php" title="Go to PHP documentation">getTimestamp</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="diff" id="_diff">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_diff">#</a>
+		<code><a href="http://php.net/manual/datetime.diff.php" title="Go to PHP documentation">diff</a>( <span> <var>$object</var></span>, <span> <var>$absolute</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ATOM" id="ATOM">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.atom" title="Go to PHP documentation"><b>ATOM</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'Y-m-d\\TH:i:sP'</span></code></td>
+		<td class="description"><div>
+			<a href="#ATOM" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="COOKIE" id="COOKIE">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.cookie" title="Go to PHP documentation"><b>COOKIE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'l, d-M-y H:i:s T'</span></code></td>
+		<td class="description"><div>
+			<a href="#COOKIE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ISO8601" id="ISO8601">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.iso8601" title="Go to PHP documentation"><b>ISO8601</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'Y-m-d\\TH:i:sO'</span></code></td>
+		<td class="description"><div>
+			<a href="#ISO8601" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RFC822" id="RFC822">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rfc822" title="Go to PHP documentation"><b>RFC822</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'D, d M y H:i:s O'</span></code></td>
+		<td class="description"><div>
+			<a href="#RFC822" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RFC850" id="RFC850">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rfc850" title="Go to PHP documentation"><b>RFC850</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'l, d-M-y H:i:s T'</span></code></td>
+		<td class="description"><div>
+			<a href="#RFC850" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RFC1036" id="RFC1036">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rfc1036" title="Go to PHP documentation"><b>RFC1036</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'D, d M y H:i:s O'</span></code></td>
+		<td class="description"><div>
+			<a href="#RFC1036" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RFC1123" id="RFC1123">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rfc1123" title="Go to PHP documentation"><b>RFC1123</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'D, d M Y H:i:s O'</span></code></td>
+		<td class="description"><div>
+			<a href="#RFC1123" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RFC2822" id="RFC2822">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rfc2822" title="Go to PHP documentation"><b>RFC2822</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'D, d M Y H:i:s O'</span></code></td>
+		<td class="description"><div>
+			<a href="#RFC2822" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RFC3339" id="RFC3339">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rfc3339" title="Go to PHP documentation"><b>RFC3339</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'Y-m-d\\TH:i:sP'</span></code></td>
+		<td class="description"><div>
+			<a href="#RFC3339" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RSS" id="RSS">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.rss" title="Go to PHP documentation"><b>RSS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'D, d M Y H:i:s O'</span></code></td>
+		<td class="description"><div>
+			<a href="#RSS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="W3C" id="W3C">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetime.php#datetime.constants.w3c" title="Go to PHP documentation"><b>W3C</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'Y-m-d\\TH:i:sP'</span></code></td>
+		<td class="description"><div>
+			<a href="#W3C" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

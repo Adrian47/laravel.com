@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Database\Eloquent\Model - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Laravel.Database.Eloquent.Model.html">Model</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Pivot.html">Pivot</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Query.html">Query</a></li>
+			</ul>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Database.Eloquent.html" title="Summary of Laravel\Database\Eloquent"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Model</h1>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Laravel.Database.Eloquent.Pivot.html">Laravel\Database\Eloquent\Pivot</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-Laravel.html">Laravel</a>\<a href="namespace-Laravel.Database.html">Database</a>\<a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a><br />
+
+		<b>Located at</b> <a href="source-class-Laravel.Database.Eloquent.Model.html#8" title="Go to source code">database/eloquent/model.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#101" title="Go to source code">__construct</a>( <span>array <var>$attributes</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$exists</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new Eloquent model instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new Eloquent model instance.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+					<dt><var>$exists</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fill" id="_fill">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fill">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#115" title="Go to source code">fill</a>( <span>array <var>$attributes</var></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Hydrate the model with an array of attributes.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Hydrate the model with an array of attributes.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+					<dt><var>$raw</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fill_raw" id="_fill_raw">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fill_raw">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#167" title="Go to source code">fill_raw</a>( <span>array <var>$attributes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fill the model with the contents of the array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fill the model with the contents of the array.</p>
+
+<p>No mutators or accessibility checks will be accounted for.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="accessible" id="_accessible">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_accessible">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#180" title="Go to source code">accessible</a>( <span>array <var>$attributes</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the accessible attributes for the given model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the accessible attributes for the given model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			
+			 public static
+			<code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#193" title="Go to source code">create</a>( <span>array <var>$attributes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new model and store it in the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new model and store it in the database.</p>
+
+<p>If save is successful, the model will be returned, otherwise false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>|false</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#210" title="Go to source code">update</a>( <span>mixed <var>$id</var></span>, <span>array <var>$attributes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Update a model instance in the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Update a model instance in the database.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="find" id="_find">
+
+		<td class="attributes"><code>
+			
+			 public static
+			<code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_find">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#226" title="Go to source code">find</a>( <span>string <var>$id</var></span>, <span>array <var>$columns</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'*'</span>)</span> )</code>
+
+		<div class="description short">
+			
+<p>Find a model by its primary key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find a model by its primary key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$columns</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="all" id="_all">
+
+		<td class="attributes"><code>
+			
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_all">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#240" title="Go to source code">all</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get all of the models in the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get all of the models in the database.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_with" id="__with">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__with">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#250" title="Go to source code">_with</a>( <span>array <var>$includes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>The relationships that should be eagerly loaded by the query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The relationships that should be eagerly loaded by the query.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$includes</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_one" id="_has_one">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Relationship
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has_one">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#263" title="Go to source code">has_one</a>( <span>string <var>$model</var></span>, <span>string <var>$foreign</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the query for a one-to-one association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the query for a one-to-one association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Relationship</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_many" id="_has_many">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Relationship
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has_many">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#275" title="Go to source code">has_many</a>( <span>string <var>$model</var></span>, <span>string <var>$foreign</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the query for a one-to-many association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the query for a one-to-many association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Relationship</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_one_or_many" id="_has_one_or_many">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			Relationship
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has_one_or_many">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#287" title="Go to source code">has_one_or_many</a>( <span>string <var>$type</var></span>, <span>string <var>$model</var></span>, <span>string <var>$foreign</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the query for a one-to-one / many association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the query for a one-to-one / many association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$model</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Relationship</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="belongs_to" id="_belongs_to">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Relationship
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_belongs_to">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#307" title="Go to source code">belongs_to</a>( <span>string <var>$model</var></span>, <span>string <var>$foreign</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the query for a one-to-one (inverse) relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the query for a one-to-one (inverse) relationship.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Relationship</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_many_and_belongs_to" id="_has_many_and_belongs_to">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Relationship
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has_many_and_belongs_to">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#329" title="Go to source code">has_many_and_belongs_to</a>( <span>string <var>$model</var></span>, <span>string <var>$table</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$foreign</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$other</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the query for a many-to-many relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the query for a many-to-many relationship.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$other</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Relationship</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="push" id="_push">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_push">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#343" title="Go to source code">push</a>( )</code>
+
+		<div class="description short">
+			
+<p>Save the model and all of its relations to the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Save the model and all of its relations to the database.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#369" title="Go to source code">save</a>( )</code>
+
+		<div class="description short">
+			
+<p>Save the model instance to the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Save the model instance to the database.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#424" title="Go to source code">delete</a>( )</code>
+
+		<div class="description short">
+			
+<p>Delete the model from the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete the model from the database.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="timestamp" id="_timestamp">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_timestamp">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#443" title="Go to source code">timestamp</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set the update and creation timestamps on the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the update and creation timestamps on the model.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			<code><a href="class-Laravel.Database.Eloquent.Query.html">Laravel\Database\Eloquent\Query</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#455" title="Go to source code">query</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get a new fluent query builder instance for the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a new fluent query builder instance for the model.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Query.html">Laravel\Database\Eloquent\Query</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sync" id="_sync">
+
+		<td class="attributes"><code>
+			
+			final public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sync">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#465" title="Go to source code">sync</a>( )</code>
+
+		<div class="description short">
+			
+<p>Sync the original attributes with the current attributes.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sync the original attributes with the current attributes.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="changed" id="_changed">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_changed">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#477" title="Go to source code">changed</a>( <span>string <var>$attribute</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine if a given attribute has changed from its original state.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if a given attribute has changed from its original state.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attribute</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dirty" id="_dirty">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dirty">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#488" title="Go to source code">dirty</a>( )</code>
+
+		<div class="description short">
+			
+<p>Determine if the model has been changed from its original state.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if the model has been changed from its original state.</p>
+
+<p>Models that haven't been persisted to storage are always considered
+dirty.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table" id="_table">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#500" title="Go to source code">table</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the name of the table associated with the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the name of the table associated with the model.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_dirty" id="_get_dirty">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_dirty">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#510" title="Go to source code">get_dirty</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the dirty attributes for the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the dirty attributes for the model.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_key" id="_get_key">
+
+		<td class="attributes"><code>
+			
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_key">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#530" title="Go to source code">get_key</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the value of the primary key for the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the value of the primary key for the model.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_key" id="_set_key">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_key">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#540" title="Go to source code">set_key</a>( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the value of the primary key for the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the value of the primary key for the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_attribute" id="_get_attribute">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_attribute">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#551" title="Go to source code">get_attribute</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get a given attribute from the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a given attribute from the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_attribute" id="_set_attribute">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_attribute">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#561" title="Go to source code">set_attribute</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set an attribute's value on the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set an attribute's value on the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="purge" id="_purge">
+
+		<td class="attributes"><code>
+			
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_purge">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#573" title="Go to source code">purge</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove an attribute from the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove an attribute from the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="to_array" id="_to_array">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_to_array">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#585" title="Go to source code">to_array</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the model attributes and relationships in array form.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the model attributes and relationships in array form.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fire_event" id="_fire_event">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fire_event">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#634" title="Go to source code">fire_event</a>( <span>string <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fire a given event for the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fire a given event for the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#647" title="Go to source code">__get</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Handle the dynamic retrieval of attributes and associations.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handle the dynamic retrieval of attributes and associations.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#688" title="Go to source code">__set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Handle the dynamic setting of attributes.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handle the dynamic setting of attributes.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___isset">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#700" title="Go to source code">__isset</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine if an attribute exists on the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if an attribute exists on the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___unset">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#716" title="Go to source code">__unset</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove an attribute from the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove an attribute from the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#730" title="Go to source code">__call</a>( <span>string <var>$method</var></span>, <span>array <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Handle dynamic method calls on the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handle dynamic method calls on the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__callStatic" id="___callStatic">
+
+		<td class="attributes"><code>
+			
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___callStatic">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Model.html#778" title="Go to source code">__callStatic</a>( <span>string <var>$method</var></span>, <span>array <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Dynamically handle static method calls on the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dynamically handle static method calls on the model.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="attributes" id="$attributes">
+
+		<td class="attributes"><code>
+			
+			public 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#10" title="Go to source code"><var>$attributes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$attributes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>All of the model's attributes.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>All of the model's attributes.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="original" id="$original">
+
+		<td class="attributes"><code>
+			
+			public 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#17" title="Go to source code"><var>$original</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$original" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The model's attributes in their original state.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The model's attributes in their original state.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="relationships" id="$relationships">
+
+		<td class="attributes"><code>
+			
+			public 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#24" title="Go to source code"><var>$relationships</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$relationships" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The relationships that have been loaded for the query.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The relationships that have been loaded for the query.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="exists" id="$exists">
+
+		<td class="attributes"><code>
+			
+			public 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#31" title="Go to source code"><var>$exists</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$exists" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Indicates if the model exists in the database.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates if the model exists in the database.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="includes" id="$includes">
+
+		<td class="attributes"><code>
+			
+			public 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#38" title="Go to source code"><var>$includes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$includes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The relationships that should be eagerly loaded.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The relationships that should be eagerly loaded.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="key" id="$key">
+
+		<td class="attributes"><code>
+			
+			public static
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#45" title="Go to source code"><var>$key</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'id'</span></code></td>
+		<td class="description"><div>
+			<a href="#$key" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The primary key for the model on the database table.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The primary key for the model on the database table.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="accessible" id="$accessible">
+
+		<td class="attributes"><code>
+			
+			public static
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#52" title="Go to source code"><var>$accessible</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$accessible" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The attributes that are accessible for mass assignment.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The attributes that are accessible for mass assignment.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="hidden" id="$hidden">
+
+		<td class="attributes"><code>
+			
+			public static
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#59" title="Go to source code"><var>$hidden</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$hidden" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The attributes that should be excluded from to_array.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The attributes that should be excluded from to_array.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="timestamps" id="$timestamps">
+
+		<td class="attributes"><code>
+			
+			public static
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#66" title="Go to source code"><var>$timestamps</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$timestamps" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Indicates if the model has update and creation timestamps.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates if the model has update and creation timestamps.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="table" id="$table">
+
+		<td class="attributes"><code>
+			
+			public static
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#73" title="Go to source code"><var>$table</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$table" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The name of the table associated with the model.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The name of the table associated with the model.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="connection" id="$connection">
+
+		<td class="attributes"><code>
+			
+			public static
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#80" title="Go to source code"><var>$connection</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$connection" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The name of the database connection that should be used for the model.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The name of the database connection that should be used for the model.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sequence" id="$sequence">
+
+		<td class="attributes"><code>
+			
+			public static
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#87" title="Go to source code"><var>$sequence</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$sequence" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The name of the sequence associated with the model.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The name of the sequence associated with the model.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="per_page" id="$per_page">
+
+		<td class="attributes"><code>
+			
+			public static
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Model.html#94" title="Go to source code"><var>$per_page</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">20</span></code></td>
+		<td class="description"><div>
+			<a href="#$per_page" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The default number of models to show per page when paginating.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The default number of models to show per page when paginating.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\HttpFoundation\Cookie - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.ApacheRequest.html">ApacheRequest</a></li>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.Cookie.html">Cookie</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.FileBag.html">FileBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.HeaderBag.html">HeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.JsonResponse.html">JsonResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.LaravelRequest.html">LaravelRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">ParameterBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RedirectResponse.html">RedirectResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Request.html">Request</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcher.html">RequestMatcher</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Response.html">Response</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ResponseHeaderBag.html">ResponseHeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ServerBag.html">ServerBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.StreamedResponse.html">StreamedResponse</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcherInterface.html">RequestMatcherInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.html" title="Summary of Symfony\Component\HttpFoundation"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Cookie</h1>
+
+	<div class="description">
+	
+<p>Represents a cookie</p>
+
+	</div>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a><br />
+
+				<b>Author:</b>
+				Johannes M. Schmitt &lt;<a
+href="mailto:schmittjoh&#64;gmail.com">schmittjoh&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Api</b>
+				<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#14" title="Go to source code">vendor/Symfony/Component/HttpFoundation/Cookie.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#31" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var> = <span class="php-keyword1">null</span></span>, <span>integer|string|<code><a href="class-DateTime.html">DateTime</a></code> <var>$expire</var> = <span class="php-num">0</span></span>, <span>string <var>$path</var> = <span class="php-quote">'/'</span></span>, <span>string <var>$domain</var> = <span class="php-keyword1">null</span></span>, <span>Boolean <var>$secure</var> = <span class="php-keyword1">false</span></span>, <span>Boolean <var>$httpOnly</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The name of the cookie</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br> The value of the cookie</dd>
+					<dt><var>$expire</var></dt>
+					<dd><code>integer|string|<code><a href="class-DateTime.html">DateTime</a></code></code><br> The time the cookie expires</dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br> The path on the server in which the cookie will be available on</dd>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code><br> The domain that the cookie is available to</dd>
+					<dt><var>$secure</var></dt>
+					<dd><code>Boolean</code><br> Whether the cookie should only be transmitted over a secure HTTPS connection
+from the client</dd>
+					<dt><var>$httpOnly</var></dt>
+					<dd><code>Boolean</code><br> Whether the cookie will be made accessible only through the HTTP protocol</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#75" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getName">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#108" title="Go to source code">getName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the name of the cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the name of the cookie.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getValue" id="_getValue">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getValue">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#120" title="Go to source code">getValue</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the value of the cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the value of the cookie.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDomain" id="_getDomain">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDomain">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#132" title="Go to source code">getDomain</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the domain that the cookie is available to.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the domain that the cookie is available to.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExpiresTime" id="_getExpiresTime">
+
+		<td class="attributes"><code>
+			
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getExpiresTime">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#144" title="Go to source code">getExpiresTime</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the time the cookie expires.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the time the cookie expires.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPath" id="_getPath">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPath">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#156" title="Go to source code">getPath</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the path on the server in which the cookie will be available on.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the path on the server in which the cookie will be available on.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSecure" id="_isSecure">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isSecure">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#168" title="Go to source code">isSecure</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the cookie should only be transmitted over a secure HTTPS
+connection from the client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the cookie should only be transmitted over a secure HTTPS
+connection from the client.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isHttpOnly" id="_isHttpOnly">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isHttpOnly">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#180" title="Go to source code">isHttpOnly</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the cookie will be made accessible only through the HTTP
+protocol.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the cookie will be made accessible only through the HTTP
+protocol.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isCleared" id="_isCleared">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isCleared">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#192" title="Go to source code">isCleared</a>( )</code>
+
+		<div class="description short">
+			
+<p>Whether this cookie is about to be cleared</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Whether this cookie is about to be cleared</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="name" id="$name">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#23" title="Go to source code"><var>$name</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$name" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="value" id="$value">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#24" title="Go to source code"><var>$value</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$value" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="domain" id="$domain">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#25" title="Go to source code"><var>$domain</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$domain" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="expire" id="$expire">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#26" title="Go to source code"><var>$expire</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$expire" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="path" id="$path">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#27" title="Go to source code"><var>$path</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="secure" id="$secure">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#28" title="Go to source code"><var>$secure</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$secure" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="httpOnly" id="$httpOnly">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Cookie.html#29" title="Go to source code"><var>$httpOnly</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$httpOnly" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

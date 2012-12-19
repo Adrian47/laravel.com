@@ -1,93 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
-	<meta name="robots" content="noindex" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>File database/schema/grammars/sqlserver.php - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
 
-	<title>File database/schema/grammars/sqlserver.php</title>
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="resources/combined.js?2162224609"></script>
-	<script type="text/javascript" src="elementlist.js?3519551823"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1022895712" />
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
 
-</head>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
 
-<body>
-<div class="laravel-header">
-	<img src="http://beta.laravel.com/img/laravel.png" alt="" />
-</div>
-<div class="col-container">
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
 
-		<div id="groups">
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="active main"><a href="namespace-Laravel.html">Laravel</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.html">Cache</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.Drivers.html">Drivers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.html">CLI</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.Providers.html">Providers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Migrate.html">Migrate</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Session.html">Session</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Test.html">Test</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="active main"><a href="namespace-Laravel.Database.html">Database</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Connectors.html">Connectors</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Database.Query.html">Query</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Query.Grammars.html">Grammars</a>
-						</li>
-							</ul></li>
-				<li class="active main"><a href="namespace-Laravel.Database.Schema.html">Schema</a>
-						<span></span>
-						<ul>
-				<li class="active main"><a href="namespace-Laravel.Database.Schema.Grammars.html">Grammars</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Routing.html">Routing</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Session.html">Session</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Session.Drivers.html">Drivers</a>
-						</li>
-							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
-				<li><a href="namespace-PHP.html">PHP</a>
-						</li>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
 			</ul>
-		</div>
 
 		<hr />
 
-		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Laravel.Database.Schema.Grammars.Grammar.html">Grammar</a></li>
@@ -101,38 +145,32 @@
 
 
 
-		</div>
-	</div>
-</div>
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
-	</form>
 
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-Laravel.Database.Schema.Grammars.html" title="Summary of Laravel\Database\Schema\Grammars"><span>Namespace</span></a>
-			</li>
-			<li>
-				<a href="class-Laravel.Database.Schema.Grammars.SQLServer.html" title="Summary of Laravel\Database\Schema\Grammars\SQLServer"><span>Class</span></a>
-			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Database.Schema.Grammars.html" title="Summary of Laravel\Database\Schema\Grammars"><span>Namespace</span></a>
+							</li>
+							<li>
+								<a href="class-Laravel.Database.Schema.Grammars.SQLServer.html" title="Summary of Laravel\Database\Schema\Grammars\SQLServer"><span>Class</span></a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
 
 <pre><code><a href="#1" id="1" class="l">  1: </a><span class="xlang">&lt;?php</span> <span class="php-keyword1">namespace</span> Laravel\Database\Schema\Grammars;
 <a href="#2" id="2" class="l">  2: </a>
@@ -448,120 +486,148 @@
 <a href="#312" id="312" class="l">312: </a>    }
 <a href="#313" id="313" class="l">313: </a>
 <a href="#314" id="314" class="l">314: </a>    <span class="php-comment">/**
-</span><a href="#315" id="315" class="l">315: </a><span class="php-comment">     * Generate the data-type definition for a string.
+</span><a href="#315" id="315" class="l">315: </a><span class="php-comment">     * Drop a foreign key constraint from the table.
 </span><a href="#316" id="316" class="l">316: </a><span class="php-comment">     *
-</span><a href="#317" id="317" class="l">317: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#318" id="318" class="l">318: </a><span class="php-comment">     * @return string
-</span><a href="#319" id="319" class="l">319: </a><span class="php-comment">     */</span>
-<a href="#320" id="320" class="l">320: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_string(Fluent <span class="php-var">$column</span>)
-<a href="#321" id="321" class="l">321: </a>    {
-<a href="#322" id="322" class="l">322: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'NVARCHAR('</span>.<span class="php-var">$column</span>-&gt;length.<span class="php-quote">')'</span>;
-<a href="#323" id="323" class="l">323: </a>    }
-<a href="#324" id="324" class="l">324: </a>
-<a href="#325" id="325" class="l">325: </a>    <span class="php-comment">/**
-</span><a href="#326" id="326" class="l">326: </a><span class="php-comment">     * Generate the data-type definition for an integer.
-</span><a href="#327" id="327" class="l">327: </a><span class="php-comment">     *
-</span><a href="#328" id="328" class="l">328: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#329" id="329" class="l">329: </a><span class="php-comment">     * @return string
-</span><a href="#330" id="330" class="l">330: </a><span class="php-comment">     */</span>
-<a href="#331" id="331" class="l">331: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_integer(Fluent <span class="php-var">$column</span>)
-<a href="#332" id="332" class="l">332: </a>    {
-<a href="#333" id="333" class="l">333: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'INT'</span>;
-<a href="#334" id="334" class="l">334: </a>    }
-<a href="#335" id="335" class="l">335: </a>
-<a href="#336" id="336" class="l">336: </a>    <span class="php-comment">/**
-</span><a href="#337" id="337" class="l">337: </a><span class="php-comment">     * Generate the data-type definition for an integer.
-</span><a href="#338" id="338" class="l">338: </a><span class="php-comment">     *
-</span><a href="#339" id="339" class="l">339: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#340" id="340" class="l">340: </a><span class="php-comment">     * @return string
-</span><a href="#341" id="341" class="l">341: </a><span class="php-comment">     */</span>
-<a href="#342" id="342" class="l">342: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_float(Fluent <span class="php-var">$column</span>)
-<a href="#343" id="343" class="l">343: </a>    {
-<a href="#344" id="344" class="l">344: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'FLOAT'</span>;
-<a href="#345" id="345" class="l">345: </a>    }
-<a href="#346" id="346" class="l">346: </a>
-<a href="#347" id="347" class="l">347: </a>    <span class="php-comment">/**
-</span><a href="#348" id="348" class="l">348: </a><span class="php-comment">     * Generate the data-type definition for a boolean.
-</span><a href="#349" id="349" class="l">349: </a><span class="php-comment">     *
-</span><a href="#350" id="350" class="l">350: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#351" id="351" class="l">351: </a><span class="php-comment">     * @return string
-</span><a href="#352" id="352" class="l">352: </a><span class="php-comment">     */</span>
-<a href="#353" id="353" class="l">353: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_boolean(Fluent <span class="php-var">$column</span>)
-<a href="#354" id="354" class="l">354: </a>    {
-<a href="#355" id="355" class="l">355: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'TINYINT'</span>;
-<a href="#356" id="356" class="l">356: </a>    }
-<a href="#357" id="357" class="l">357: </a>
-<a href="#358" id="358" class="l">358: </a>    <span class="php-comment">/**
-</span><a href="#359" id="359" class="l">359: </a><span class="php-comment">     * Generate the data-type definition for a date.
-</span><a href="#360" id="360" class="l">360: </a><span class="php-comment">     *
-</span><a href="#361" id="361" class="l">361: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#362" id="362" class="l">362: </a><span class="php-comment">     * @return string
-</span><a href="#363" id="363" class="l">363: </a><span class="php-comment">     */</span>
-<a href="#364" id="364" class="l">364: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_date(Fluent <span class="php-var">$column</span>)
-<a href="#365" id="365" class="l">365: </a>    {
-<a href="#366" id="366" class="l">366: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'DATETIME'</span>;
-<a href="#367" id="367" class="l">367: </a>    }
-<a href="#368" id="368" class="l">368: </a>
-<a href="#369" id="369" class="l">369: </a>    <span class="php-comment">/**
-</span><a href="#370" id="370" class="l">370: </a><span class="php-comment">     * Generate the data-type definition for a timestamp.
-</span><a href="#371" id="371" class="l">371: </a><span class="php-comment">     *
-</span><a href="#372" id="372" class="l">372: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#373" id="373" class="l">373: </a><span class="php-comment">     * @return string
-</span><a href="#374" id="374" class="l">374: </a><span class="php-comment">     */</span>
-<a href="#375" id="375" class="l">375: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_timestamp(Fluent <span class="php-var">$column</span>)
-<a href="#376" id="376" class="l">376: </a>    {
-<a href="#377" id="377" class="l">377: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'TIMESTAMP'</span>;
-<a href="#378" id="378" class="l">378: </a>    }
-<a href="#379" id="379" class="l">379: </a>
-<a href="#380" id="380" class="l">380: </a>    <span class="php-comment">/**
-</span><a href="#381" id="381" class="l">381: </a><span class="php-comment">     * Generate the data-type definition for a text column.
-</span><a href="#382" id="382" class="l">382: </a><span class="php-comment">     *
-</span><a href="#383" id="383" class="l">383: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#384" id="384" class="l">384: </a><span class="php-comment">     * @return string
-</span><a href="#385" id="385" class="l">385: </a><span class="php-comment">     */</span>
-<a href="#386" id="386" class="l">386: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_text(Fluent <span class="php-var">$column</span>)
-<a href="#387" id="387" class="l">387: </a>    {
-<a href="#388" id="388" class="l">388: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'NVARCHAR(MAX)'</span>;
-<a href="#389" id="389" class="l">389: </a>    }
-<a href="#390" id="390" class="l">390: </a>
-<a href="#391" id="391" class="l">391: </a>    <span class="php-comment">/**
-</span><a href="#392" id="392" class="l">392: </a><span class="php-comment">     * Generate the data-type definition for a blob.
-</span><a href="#393" id="393" class="l">393: </a><span class="php-comment">     *
-</span><a href="#394" id="394" class="l">394: </a><span class="php-comment">     * @param  Fluent  $column
-</span><a href="#395" id="395" class="l">395: </a><span class="php-comment">     * @return string
-</span><a href="#396" id="396" class="l">396: </a><span class="php-comment">     */</span>
-<a href="#397" id="397" class="l">397: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_blob(Fluent <span class="php-var">$column</span>)
-<a href="#398" id="398" class="l">398: </a>    {
-<a href="#399" id="399" class="l">399: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'VARBINARY(MAX)'</span>;
-<a href="#400" id="400" class="l">400: </a>    }
-<a href="#401" id="401" class="l">401: </a>
-<a href="#402" id="402" class="l">402: </a>}</code></pre>
+</span><a href="#317" id="317" class="l">317: </a><span class="php-comment">     * @param  Table   $table
+</span><a href="#318" id="318" class="l">318: </a><span class="php-comment">     * @param  Fluent  $fluent
+</span><a href="#319" id="319" class="l">319: </a><span class="php-comment">     * @return string
+</span><a href="#320" id="320" class="l">320: </a><span class="php-comment">     */</span>
+<a href="#321" id="321" class="l">321: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> drop_foreign(Table <span class="php-var">$table</span>, Fluent <span class="php-var">$command</span>)
+<a href="#322" id="322" class="l">322: </a>    {
+<a href="#323" id="323" class="l">323: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;drop_constraint(<span class="php-var">$table</span>, <span class="php-var">$command</span>);        
+<a href="#324" id="324" class="l">324: </a>    }
+<a href="#325" id="325" class="l">325: </a>
+<a href="#326" id="326" class="l">326: </a>    <span class="php-comment">/**
+</span><a href="#327" id="327" class="l">327: </a><span class="php-comment">     * Generate the data-type definition for a string.
+</span><a href="#328" id="328" class="l">328: </a><span class="php-comment">     *
+</span><a href="#329" id="329" class="l">329: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#330" id="330" class="l">330: </a><span class="php-comment">     * @return string
+</span><a href="#331" id="331" class="l">331: </a><span class="php-comment">     */</span>
+<a href="#332" id="332" class="l">332: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_string(Fluent <span class="php-var">$column</span>)
+<a href="#333" id="333" class="l">333: </a>    {
+<a href="#334" id="334" class="l">334: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'NVARCHAR('</span>.<span class="php-var">$column</span>-&gt;length.<span class="php-quote">')'</span>;
+<a href="#335" id="335" class="l">335: </a>    }
+<a href="#336" id="336" class="l">336: </a>
+<a href="#337" id="337" class="l">337: </a>    <span class="php-comment">/**
+</span><a href="#338" id="338" class="l">338: </a><span class="php-comment">     * Generate the data-type definition for an integer.
+</span><a href="#339" id="339" class="l">339: </a><span class="php-comment">     *
+</span><a href="#340" id="340" class="l">340: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#341" id="341" class="l">341: </a><span class="php-comment">     * @return string
+</span><a href="#342" id="342" class="l">342: </a><span class="php-comment">     */</span>
+<a href="#343" id="343" class="l">343: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_integer(Fluent <span class="php-var">$column</span>)
+<a href="#344" id="344" class="l">344: </a>    {
+<a href="#345" id="345" class="l">345: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'INT'</span>;
+<a href="#346" id="346" class="l">346: </a>    }
+<a href="#347" id="347" class="l">347: </a>
+<a href="#348" id="348" class="l">348: </a>    <span class="php-comment">/**
+</span><a href="#349" id="349" class="l">349: </a><span class="php-comment">     * Generate the data-type definition for an integer.
+</span><a href="#350" id="350" class="l">350: </a><span class="php-comment">     *
+</span><a href="#351" id="351" class="l">351: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#352" id="352" class="l">352: </a><span class="php-comment">     * @return string
+</span><a href="#353" id="353" class="l">353: </a><span class="php-comment">     */</span>
+<a href="#354" id="354" class="l">354: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_float(Fluent <span class="php-var">$column</span>)
+<a href="#355" id="355" class="l">355: </a>    {
+<a href="#356" id="356" class="l">356: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'FLOAT'</span>;
+<a href="#357" id="357" class="l">357: </a>    }
+<a href="#358" id="358" class="l">358: </a>
+<a href="#359" id="359" class="l">359: </a>    <span class="php-comment">/**
+</span><a href="#360" id="360" class="l">360: </a><span class="php-comment">     * Generate the data-type definintion for a decimal.
+</span><a href="#361" id="361" class="l">361: </a><span class="php-comment">     *
+</span><a href="#362" id="362" class="l">362: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#363" id="363" class="l">363: </a><span class="php-comment">     * @return string
+</span><a href="#364" id="364" class="l">364: </a><span class="php-comment">     */</span>
+<a href="#365" id="365" class="l">365: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_decimal(Fluent <span class="php-var">$column</span>)
+<a href="#366" id="366" class="l">366: </a>    {
+<a href="#367" id="367" class="l">367: </a>        <span class="php-keyword1">return</span> <span class="php-quote">&quot;DECIMAL(</span><span class="php-var">{$column-&gt;precision}</span><span class="php-quote">, </span><span class="php-var">{$column-&gt;scale}</span><span class="php-quote">)&quot;</span>;
+<a href="#368" id="368" class="l">368: </a>    }
+<a href="#369" id="369" class="l">369: </a>
+<a href="#370" id="370" class="l">370: </a>    <span class="php-comment">/**
+</span><a href="#371" id="371" class="l">371: </a><span class="php-comment">     * Generate the data-type definition for a boolean.
+</span><a href="#372" id="372" class="l">372: </a><span class="php-comment">     *
+</span><a href="#373" id="373" class="l">373: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#374" id="374" class="l">374: </a><span class="php-comment">     * @return string
+</span><a href="#375" id="375" class="l">375: </a><span class="php-comment">     */</span>
+<a href="#376" id="376" class="l">376: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_boolean(Fluent <span class="php-var">$column</span>)
+<a href="#377" id="377" class="l">377: </a>    {
+<a href="#378" id="378" class="l">378: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'TINYINT'</span>;
+<a href="#379" id="379" class="l">379: </a>    }
+<a href="#380" id="380" class="l">380: </a>
+<a href="#381" id="381" class="l">381: </a>    <span class="php-comment">/**
+</span><a href="#382" id="382" class="l">382: </a><span class="php-comment">     * Generate the data-type definition for a date.
+</span><a href="#383" id="383" class="l">383: </a><span class="php-comment">     *
+</span><a href="#384" id="384" class="l">384: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#385" id="385" class="l">385: </a><span class="php-comment">     * @return string
+</span><a href="#386" id="386" class="l">386: </a><span class="php-comment">     */</span>
+<a href="#387" id="387" class="l">387: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_date(Fluent <span class="php-var">$column</span>)
+<a href="#388" id="388" class="l">388: </a>    {
+<a href="#389" id="389" class="l">389: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'DATETIME'</span>;
+<a href="#390" id="390" class="l">390: </a>    }
+<a href="#391" id="391" class="l">391: </a>
+<a href="#392" id="392" class="l">392: </a>    <span class="php-comment">/**
+</span><a href="#393" id="393" class="l">393: </a><span class="php-comment">     * Generate the data-type definition for a timestamp.
+</span><a href="#394" id="394" class="l">394: </a><span class="php-comment">     *
+</span><a href="#395" id="395" class="l">395: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#396" id="396" class="l">396: </a><span class="php-comment">     * @return string
+</span><a href="#397" id="397" class="l">397: </a><span class="php-comment">     */</span>
+<a href="#398" id="398" class="l">398: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_timestamp(Fluent <span class="php-var">$column</span>)
+<a href="#399" id="399" class="l">399: </a>    {
+<a href="#400" id="400" class="l">400: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'TIMESTAMP'</span>;
+<a href="#401" id="401" class="l">401: </a>    }
+<a href="#402" id="402" class="l">402: </a>
+<a href="#403" id="403" class="l">403: </a>    <span class="php-comment">/**
+</span><a href="#404" id="404" class="l">404: </a><span class="php-comment">     * Generate the data-type definition for a text column.
+</span><a href="#405" id="405" class="l">405: </a><span class="php-comment">     *
+</span><a href="#406" id="406" class="l">406: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#407" id="407" class="l">407: </a><span class="php-comment">     * @return string
+</span><a href="#408" id="408" class="l">408: </a><span class="php-comment">     */</span>
+<a href="#409" id="409" class="l">409: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_text(Fluent <span class="php-var">$column</span>)
+<a href="#410" id="410" class="l">410: </a>    {
+<a href="#411" id="411" class="l">411: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'NVARCHAR(MAX)'</span>;
+<a href="#412" id="412" class="l">412: </a>    }
+<a href="#413" id="413" class="l">413: </a>
+<a href="#414" id="414" class="l">414: </a>    <span class="php-comment">/**
+</span><a href="#415" id="415" class="l">415: </a><span class="php-comment">     * Generate the data-type definition for a blob.
+</span><a href="#416" id="416" class="l">416: </a><span class="php-comment">     *
+</span><a href="#417" id="417" class="l">417: </a><span class="php-comment">     * @param  Fluent  $column
+</span><a href="#418" id="418" class="l">418: </a><span class="php-comment">     * @return string
+</span><a href="#419" id="419" class="l">419: </a><span class="php-comment">     */</span>
+<a href="#420" id="420" class="l">420: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> type_blob(Fluent <span class="php-var">$column</span>)
+<a href="#421" id="421" class="l">421: </a>    {
+<a href="#422" id="422" class="l">422: </a>        <span class="php-keyword1">return</span> <span class="php-quote">'VARBINARY(MAX)'</span>;
+<a href="#423" id="423" class="l">423: </a>    }
+<a href="#424" id="424" class="l">424: </a>
+<a href="#425" id="425" class="l">425: </a>}</code></pre>
 
+				</div>
 
-</div>
-</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<ul class="span7">
-				<li><a href="http://beta.laravel.com/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="http://forums.laravel.com">Forums</a></li>
-				<li><a href="http://bundles.laravel.com">Bundles</a></li>
-				<li><a href="http://laravel.com/docs">Learn</a></li>
-				<li class="download">
-					<a href="http://laravel.com/download">Download <i class="download"></i></a>
-				</li>
-			</ul>
-			<ul class="social span3 offset2">
-				<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
-				<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
-			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-</body>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
 </html>

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\HttpFoundation\HeaderBag - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.ApacheRequest.html">ApacheRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Cookie.html">Cookie</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.FileBag.html">FileBag</a></li>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.HeaderBag.html">HeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.JsonResponse.html">JsonResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.LaravelRequest.html">LaravelRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">ParameterBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RedirectResponse.html">RedirectResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Request.html">Request</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcher.html">RequestMatcher</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Response.html">Response</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ResponseHeaderBag.html">ResponseHeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ServerBag.html">ServerBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.StreamedResponse.html">StreamedResponse</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcherInterface.html">RequestMatcherInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.html" title="Summary of Symfony\Component\HttpFoundation"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class HeaderBag</h1>
+
+	<div class="description">
+	
+<p>HeaderBag is a container for HTTP headers.</p>
+
+	</div>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Symfony.Component.HttpFoundation.ResponseHeaderBag.html">Symfony\Component\HttpFoundation\ResponseHeaderBag</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+				<b>Api</b>
+				<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#14" title="Go to source code">vendor/Symfony/Component/HttpFoundation/HeaderBag.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#26" title="Go to source code">__construct</a>( <span>array <var>$headers</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$headers</var></dt>
+					<dd><code>array</code><br> An array of HTTP headers</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#42" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the headers as a string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the headers as a string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The headers<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="all" id="_all">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_all">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#69" title="Go to source code">all</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the headers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the headers.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of headers<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="keys" id="_keys">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_keys">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#81" title="Go to source code">keys</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the parameter keys.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the parameter keys.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of parameter keys<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace" id="_replace">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replace">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#93" title="Go to source code">replace</a>( <span>array <var>$headers</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Replaces the current HTTP headers by a new set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replaces the current HTTP headers by a new set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$headers</var></dt>
+					<dd><code>array</code><br> An array of HTTP headers</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#106" title="Go to source code">add</a>( <span>array <var>$headers</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds new headers the current HTTP headers set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds new headers the current HTTP headers set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$headers</var></dt>
+					<dd><code>array</code><br> An array of HTTP headers</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#120" title="Go to source code">get</a>( <span>string <var>$key</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span>, <span>Boolean <var>$first</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a header value by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a header value by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The header name</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br> The default value</dd>
+					<dt><var>$first</var></dt>
+					<dd><code>Boolean</code><br> Whether to return the first value or all header values</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|array</code><br>The first header value if $first is true, an array of values otherwise<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set" id="_set">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#150" title="Go to source code">set</a>( <span>string <var>$key</var></span>, <span>string|array <var>$values</var></span>, <span>Boolean <var>$replace</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets a header by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a header by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The key</dd>
+					<dt><var>$values</var></dt>
+					<dd><code>string|array</code><br> The value or an array of values</dd>
+					<dt><var>$replace</var></dt>
+					<dd><code>Boolean</code><br> Whether to replace the actual value of not (true by default)</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has" id="_has">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#176" title="Go to source code">has</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns true if the HTTP header is defined.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if the HTTP header is defined.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The HTTP header</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the parameter exists, false otherwise<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="contains" id="_contains">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_contains">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#190" title="Go to source code">contains</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns true if the given HTTP header contains the given value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if the given HTTP header contains the given value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The HTTP header name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br> The HTTP value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the value is contained in the header, false otherwise<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remove">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#205" title="Go to source code">remove</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a header.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The HTTP header name</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDate" id="_getDate">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-DateTime.html">DateTime</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDate">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#223" title="Go to source code">getDate</a>( <span>string <var>$key</var></span>, <span><a href="class-DateTime.html">DateTime</a> <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the HTTP header value converted to a date.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the HTTP header value converted to a date.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The parameter key</dd>
+					<dt><var>$default</var></dt>
+					<dd><code><code><a href="class-DateTime.html">DateTime</a></code></code><br> The default value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-DateTime.html">DateTime</a></code></code><br>The filtered value<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCacheControlDirective" id="_addCacheControlDirective">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCacheControlDirective">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#246" title="Go to source code">addCacheControlDirective</a>( <span> <var>$key</var></span>, <span> <var>$value</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasCacheControlDirective" id="_hasCacheControlDirective">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasCacheControlDirective">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#253" title="Go to source code">hasCacheControlDirective</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheControlDirective" id="_getCacheControlDirective">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheControlDirective">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#258" title="Go to source code">getCacheControlDirective</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCacheControlDirective" id="_removeCacheControlDirective">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeCacheControlDirective">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#263" title="Go to source code">removeCacheControlDirective</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheControlHeader" id="_getCacheControlHeader">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheControlHeader">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#270" title="Go to source code">getCacheControlHeader</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseCacheControl" id="_parseCacheControl">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseCacheControl">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#289" title="Go to source code">parseCacheControl</a>( <span>string <var>$header</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Parses a Cache-Control HTTP header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parses a Cache-Control HTTP header.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br> The value of the Cache-Control HTTP header</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array representing the attribute values<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="headers" id="$headers">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#23" title="Go to source code"><var>$headers</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cacheControl" id="$cacheControl">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.HeaderBag.html#24" title="Go to source code"><var>$cacheControl</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$cacheControl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

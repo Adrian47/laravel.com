@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Interface Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.Session.Flash.AutoExpireFlashBag.html">AutoExpireFlashBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Session.Flash.FlashBag.html">FlashBag</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html">FlashBagInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.Session.Flash.html" title="Summary of Symfony\Component\HttpFoundation\Session\Flash"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Interface FlashBagInterface</h1>
+
+	<div class="description">
+	
+<p>FlashBagInterface.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b>Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface</b>			
+			 implements 
+				<a href="class-Symfony.Component.HttpFoundation.Session.SessionBagInterface.html">Symfony\Component\HttpFoundation\Session\SessionBagInterface</a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-Symfony.Component.HttpFoundation.Session.Flash.AutoExpireFlashBag.html">Symfony\Component\HttpFoundation\Session\Flash\AutoExpireFlashBag</a>, 
+			<a href="class-Symfony.Component.HttpFoundation.Session.Flash.FlashBag.html">Symfony\Component\HttpFoundation\Session\Flash\FlashBag</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a>\<a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a>\<a href="namespace-Symfony.Component.HttpFoundation.Session.Flash.html">Flash</a><br />
+
+				<b>Author:</b>
+				Drak &lt;<a href="mailto:drak&#64;zikula.org">drak&#64;<!---->zikula.org</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#16" title="Go to source code">vendor/Symfony/Component/HttpFoundation/Session/Flash/FlashBagInterface.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="set" id="_set">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#23" title="Go to source code">set</a>( <span>string <var>$type</var></span>, <span>string <var>$message</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a message for a given type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a message for a given type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="peek" id="_peek">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peek">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#31" title="Go to source code">peek</a>( <span>string <var>$type</var></span>, <span>string <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets flash message for a given type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets flash message for a given type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br> Message category type.</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>string</code><br> Default value if $type doee not exist.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="peekAll" id="_peekAll">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peekAll">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#41" title="Go to source code">peekAll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets all flash messages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets all flash messages.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#48" title="Go to source code">get</a>( <span>string <var>$type</var></span>, <span>string <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets and clears flash from the stack.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets and clears flash from the stack.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>string</code><br> Default value if $type doee not exist.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="all" id="_all">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_all">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#58" title="Go to source code">all</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets and clears flashes from the stack.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets and clears flashes from the stack.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAll" id="_setAll">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAll">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#65" title="Go to source code">setAll</a>( <span>array <var>$messages</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets all flash messages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets all flash messages.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has" id="_has">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#70" title="Go to source code">has</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Has flash messages for a given type?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Has flash messages for a given type?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="keys" id="_keys">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_keys">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Flash.FlashBagInterface.html#79" title="Go to source code">keys</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of all defined types.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of all defined types.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Symfony.Component.HttpFoundation.Session.SessionBagInterface.html#methods">Symfony\Component\HttpFoundation\Session\SessionBagInterface</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Symfony.Component.HttpFoundation.Session.SessionBagInterface.html#_clear">clear()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.SessionBagInterface.html#_getName">getName()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.SessionBagInterface.html#_getStorageKey">getStorageKey()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.SessionBagInterface.html#_initialize">initialize()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

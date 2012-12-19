@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Validator - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
 
-	<title>Class Laravel\Validator</title>
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="resources/combined.js?2162224609"></script>
-	<script type="text/javascript" src="elementlist.js?3519551823"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1022895712" />
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
 
-</head>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
 
-<body>
-<div class="laravel-header">
-	<img src="http://beta.laravel.com/img/laravel.png" alt="" />
-</div>
-<div class="col-container">
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
 
-		<div id="groups">
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="active main"><a href="namespace-Laravel.html">Laravel</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.html">Cache</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.Drivers.html">Drivers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.html">CLI</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.Providers.html">Providers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Migrate.html">Migrate</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Session.html">Session</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Test.html">Test</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Database.html">Database</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Connectors.html">Connectors</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Database.Query.html">Query</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Query.Grammars.html">Grammars</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.html">Schema</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.Grammars.html">Grammars</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Routing.html">Routing</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Session.html">Session</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Session.Drivers.html">Drivers</a>
-						</li>
-							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
-				<li><a href="namespace-PHP.html">PHP</a>
-						</li>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
 			</ul>
-		</div>
 
 		<hr />
 
-		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Laravel.Asset.html">Asset</a></li>
@@ -114,6 +159,7 @@
 				<li><a href="class-Laravel.Memcached.html">Memcached</a></li>
 				<li><a href="class-Laravel.Messages.html">Messages</a></li>
 				<li><a href="class-Laravel.Paginator.html">Paginator</a></li>
+				<li><a href="class-Laravel.Pluralizer.html">Pluralizer</a></li>
 				<li><a href="class-Laravel.Redirect.html">Redirect</a></li>
 				<li><a href="class-Laravel.Redis.html">Redis</a></li>
 				<li><a href="class-Laravel.Request.html">Request</a></li>
@@ -131,37 +177,31 @@
 
 
 
-		</div>
-	</div>
-</div>
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
-	</form>
 
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-Laravel.html" title="Summary of Laravel"><span>Namespace</span></a>
-			</li>
-			<li class="active">
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.html" title="Summary of Laravel"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
 
 <div id="content" class="class">
 	<h1>Class Validator</h1>
@@ -1717,6 +1757,52 @@ and underscores.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="validate_match" id="_validate_match">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_match">#</a>
+		<code><a href="source-class-Laravel.Validator.html#614" title="Go to source code">validate_match</a>( <span>string <var>$attribute</var></span>, <span>mixed <var>$value</var></span>, <span> <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate that an attribute passes a regular expression check.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate that an attribute passes a regular expression check.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attribute</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="validate_mimes" id="_validate_mimes">
 
 		<td class="attributes"><code>
@@ -1729,7 +1815,7 @@ and underscores.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_validate_mimes">#</a>
-		<code><a href="source-class-Laravel.Validator.html#614" title="Go to source code">validate_mimes</a>( <span>string <var>$attribute</var></span>, <span>array <var>$value</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#626" title="Go to source code">validate_mimes</a>( <span>string <var>$attribute</var></span>, <span>array <var>$value</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1765,6 +1851,98 @@ types.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="validate_before" id="_validate_before">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_before">#</a>
+		<code><a href="source-class-Laravel.Validator.html#649" title="Go to source code">validate_before</a>( <span>string <var>$attribute</var></span>, <span>mixed <var>$value</var></span>, <span>array <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate the date is before a given date.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate the date is before a given date.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attribute</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_after" id="_validate_after">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_after">#</a>
+		<code><a href="source-class-Laravel.Validator.html#662" title="Go to source code">validate_after</a>( <span>string <var>$attribute</var></span>, <span>mixed <var>$value</var></span>, <span>array <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate the date is after a given date.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate the date is after a given date.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attribute</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="message" id="_message">
 
 		<td class="attributes"><code>
@@ -1777,7 +1955,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_message">#</a>
-		<code><a href="source-class-Laravel.Validator.html#637" title="Go to source code">message</a>( <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#675" title="Go to source code">message</a>( <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1821,7 +1999,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_size_message">#</a>
-		<code><a href="source-class-Laravel.Validator.html#689" title="Go to source code">size_message</a>( <span>string <var>$bundle</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#727" title="Go to source code">size_message</a>( <span>string <var>$bundle</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1867,7 +2045,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace">#</a>
-		<code><a href="source-class-Laravel.Validator.html#721" title="Go to source code">replace</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#759" title="Go to source code">replace</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1915,7 +2093,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_between">#</a>
-		<code><a href="source-class-Laravel.Validator.html#742" title="Go to source code">replace_between</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#780" title="Go to source code">replace_between</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1963,7 +2141,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_size">#</a>
-		<code><a href="source-class-Laravel.Validator.html#756" title="Go to source code">replace_size</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#794" title="Go to source code">replace_size</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2011,7 +2189,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_min">#</a>
-		<code><a href="source-class-Laravel.Validator.html#770" title="Go to source code">replace_min</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#808" title="Go to source code">replace_min</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2059,7 +2237,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_max">#</a>
-		<code><a href="source-class-Laravel.Validator.html#784" title="Go to source code">replace_max</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#822" title="Go to source code">replace_max</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2107,7 +2285,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_in">#</a>
-		<code><a href="source-class-Laravel.Validator.html#798" title="Go to source code">replace_in</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#836" title="Go to source code">replace_in</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2155,7 +2333,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_not_in">#</a>
-		<code><a href="source-class-Laravel.Validator.html#812" title="Go to source code">replace_not_in</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#850" title="Go to source code">replace_not_in</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2203,7 +2381,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_mimes">#</a>
-		<code><a href="source-class-Laravel.Validator.html#826" title="Go to source code">replace_mimes</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#864" title="Go to source code">replace_mimes</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2251,7 +2429,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_same">#</a>
-		<code><a href="source-class-Laravel.Validator.html#840" title="Go to source code">replace_same</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#878" title="Go to source code">replace_same</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2299,7 +2477,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace_different">#</a>
-		<code><a href="source-class-Laravel.Validator.html#854" title="Go to source code">replace_different</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#892" title="Go to source code">replace_different</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2310,6 +2488,102 @@ types.</p>
 		<div class="description detailed hidden">
 			
 <p>Replace all place-holders for the different rule.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$attribute</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$rule</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace_before" id="_replace_before">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replace_before">#</a>
+		<code><a href="source-class-Laravel.Validator.html#906" title="Go to source code">replace_before</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Replace all place-holders for the before rule.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replace all place-holders for the before rule.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$attribute</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$rule</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace_after" id="_replace_after">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replace_after">#</a>
+		<code><a href="source-class-Laravel.Validator.html#920" title="Go to source code">replace_after</a>( <span>string <var>$message</var></span>, <span>string <var>$attribute</var></span>, <span>string <var>$rule</var></span>, <span>array <var>$parameters</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Replace all place-holders for the after rule.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replace all place-holders for the after rule.</p>
 
 
 
@@ -2347,7 +2621,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_attribute">#</a>
-		<code><a href="source-class-Laravel.Validator.html#868" title="Go to source code">attribute</a>( <span>string <var>$attribute</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#934" title="Go to source code">attribute</a>( <span>string <var>$attribute</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2389,7 +2663,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_has_rule">#</a>
-		<code><a href="source-class-Laravel.Validator.html#896" title="Go to source code">has_rule</a>( <span>string <var>$attribute</var></span>, <span>array <var>$rules</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#963" title="Go to source code">has_rule</a>( <span>string <var>$attribute</var></span>, <span>array <var>$rules</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2433,7 +2707,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_parse">#</a>
-		<code><a href="source-class-Laravel.Validator.html#915" title="Go to source code">parse</a>( <span>string <var>$rule</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#982" title="Go to source code">parse</a>( <span>string <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2475,7 +2749,7 @@ types.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_bundle">#</a>
-		<code><a href="source-class-Laravel.Validator.html#936" title="Go to source code">bundle</a>( <span>string <var>$bundle</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#1003" title="Go to source code">bundle</a>( <span>string <var>$bundle</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2520,7 +2794,7 @@ from.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_speaks">#</a>
-		<code><a href="source-class-Laravel.Validator.html#950" title="Go to source code">speaks</a>( <span>string <var>$language</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#1017" title="Go to source code">speaks</a>( <span>string <var>$language</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2562,7 +2836,7 @@ from.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_connection">#</a>
-		<code><a href="source-class-Laravel.Validator.html#962" title="Go to source code">connection</a>( <span><a href="class-Laravel.Database.Connection.html">Laravel\Database\Connection</a> <var>$connection</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#1029" title="Go to source code">connection</a>( <span><a href="class-Laravel.Database.Connection.html">Laravel\Database\Connection</a> <var>$connection</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2604,7 +2878,7 @@ from.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_db">#</a>
-		<code><a href="source-class-Laravel.Validator.html#974" title="Go to source code">db</a>( )</code>
+		<code><a href="source-class-Laravel.Validator.html#1041" title="Go to source code">db</a>( )</code>
 
 		<div class="description short">
 			
@@ -2641,7 +2915,7 @@ from.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Laravel.Validator.html#986" title="Go to source code">__call</a>( <span> <var>$method</var></span>, <span> <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Laravel.Validator.html#1053" title="Go to source code">__call</a>( <span> <var>$method</var></span>, <span> <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2967,31 +3241,36 @@ from.</p>
 
 </div>
 
+				</div>
 
-</div>
-</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<ul class="span7">
-				<li><a href="http://beta.laravel.com/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="http://forums.laravel.com">Forums</a></li>
-				<li><a href="http://bundles.laravel.com">Bundles</a></li>
-				<li><a href="http://laravel.com/docs">Learn</a></li>
-				<li class="download">
-					<a href="http://laravel.com/download">Download <i class="download"></i></a>
-				</li>
-			</ul>
-			<ul class="social span3 offset2">
-				<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
-				<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
-			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-</body>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
 </html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html">MockArraySessionStorage</a></li>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockFileSessionStorage.html">MockFileSessionStorage</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Session.Storage.NativeSessionStorage.html">NativeSessionStorage</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.Session.Storage.SessionStorageInterface.html">SessionStorageInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html" title="Summary of Symfony\Component\HttpFoundation\Session\Storage"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class MockFileSessionStorage</h1>
+
+	<div class="description">
+	
+<p>MockFileSessionStorage is used to mock sessions for functional testing when
+done in a single PHP process.</p>
+
+<p>No PHP session is actually started since a session can be initialized and
+shutdown only once per PHP execution cycle and this class does not pollute any
+session related globals, including session_*() functions or session.* PHP ini
+directives.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html">Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage</a>
+			
+			 implements 
+				<a href="class-Symfony.Component.HttpFoundation.Session.Storage.SessionStorageInterface.html">Symfony\Component\HttpFoundation\Session\Storage\SessionStorageInterface</a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b>Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage</b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a>\<a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a>\<a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a><br />
+
+				<b>Author:</b>
+				Drak &lt;<a href="mailto:drak&#64;zikula.org">drak&#64;<!---->zikula.org</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.HttpFoundation.Session.Storage.MockFileSessionStorage.html#14" title="Go to source code">vendor/Symfony/Component/HttpFoundation/Session/Storage/MockFileSessionStorage.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Storage.MockFileSessionStorage.html#32" title="Go to source code">__construct</a>( <span>string <var>$savePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$name</var> = <span class="php-quote">'MOCKSESSID'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savePath</var></dt>
+					<dd><code>string</code><br> Path of directory to save session files.</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> Session name.</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start" id="_start">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Storage.MockFileSessionStorage.html#53" title="Go to source code">start</a>( )</code>
+
+		<div class="description short">
+			
+<p>Starts the session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Starts the session.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True if started.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>If something goes wrong starting the session.<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.HttpFoundation.Session.Storage.SessionStorageInterface.html#_start">Symfony\Component\HttpFoundation\Session\Storage\SessionStorageInterface::start</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="regenerate" id="_regenerate">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_regenerate">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Storage.MockFileSessionStorage.html#73" title="Go to source code">regenerate</a>( <span>Boolean <var>$destroy</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Regenerates id that represents this storage.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Regenerates id that represents this storage.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$destroy</var></dt>
+					<dd><code>Boolean</code><br> Destroy session when regenerating?</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>True if session regenerated, false if error<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>If an error occurs while regenerating this storage<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.HttpFoundation.Session.Storage.SessionStorageInterface.html#_regenerate">Symfony\Component\HttpFoundation\Session\Storage\SessionStorageInterface::regenerate</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Session.Storage.MockFileSessionStorage.html#87" title="Go to source code">save</a>( )</code>
+
+		<div class="description short">
+			
+<p>Force the session to be saved and closed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Force the session to be saved and closed.</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.HttpFoundation.Session.Storage.SessionStorageInterface.html#_save">Symfony\Component\HttpFoundation\Session\Storage\SessionStorageInterface::save</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#methods">Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_clear">clear()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_generateId">generateId()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_getBag">getBag()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_getId">getId()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_getName">getName()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_loadSession">loadSession()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_registerBag">registerBag()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_setId">setId()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_setName">setName()</a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#_setSessionData">setSessionData()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#properties">Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#$closed"><var>$closed</var></a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#$data"><var>$data</var></a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#$id"><var>$id</var></a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#$name"><var>$name</var></a>, 
+<a href="class-Symfony.Component.HttpFoundation.Session.Storage.MockArraySessionStorage.html#$started"><var>$started</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

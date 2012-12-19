@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Database\Eloquent\Relationships\Has_Many_And_Belongs_To - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Belongs_To.html">Belongs_To</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many.html">Has_Many</a></li>
+				<li class="active"><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html">Has_Many_And_Belongs_To</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_One.html">Has_One</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Has_One_Or_Many.html">Has_One_Or_Many</a></li>
+				<li><a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html">Relationship</a></li>
+			</ul>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Database.Eloquent.Relationships.html" title="Summary of Laravel\Database\Eloquent\Relationships"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Has_Many_And_Belongs_To</h1>
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Laravel.Database.Eloquent.Query.html">Laravel\Database\Eloquent\Query</a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html">Laravel\Database\Eloquent\Relationships\Relationship</a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b>Laravel\Database\Eloquent\Relationships\Has_Many_And_Belongs_To</b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Laravel.html">Laravel</a>\<a href="namespace-Laravel.Database.html">Database</a>\<a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a>\<a href="namespace-Laravel.Database.Eloquent.Relationships.html">Relationships</a><br />
+
+		<b>Located at</b> <a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#7" title="Go to source code">database/eloquent/relationships/has_many_and_belongs_to.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#30" title="Go to source code">__construct</a>( <span><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code> <var>$model</var></span>, <span>string <var>$associated</var></span>, <span>string <var>$table</var></span>, <span>string <var>$foreign</var></span>, <span>string <var>$other</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new many to many relationship instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new many to many relationship instance.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd><code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code></code></dd>
+					<dt><var>$associated</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$other</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joining" id="_joining">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joining">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#59" title="Go to source code">joining</a>( <span> <var>$model</var></span>, <span> <var>$associated</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine the joining table name for the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine the joining table name for the relationship.</p>
+
+<p>By default, the name is the models sorted and joined with underscores.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="results" id="_results">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_results">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#75" title="Go to source code">results</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the properly hydrated results for the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the properly hydrated results for the relationship.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attach" id="_attach">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attach">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#85" title="Go to source code">attach</a>( <span>integer <var>$id</var></span>, <span>array <var>$attributes</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Insert a new record into the joining table of the association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Insert a new record into the joining table of the association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code><br>$joining</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="detach" id="_detach">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_detach">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#99" title="Go to source code">detach</a>( <span>integer <var>$ids</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Detach a record from the joining table of the association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detach a record from the joining table of the association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ids</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sync" id="_sync">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sync">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#112" title="Go to source code">sync</a>( <span>array <var>$ids</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sync the joining table with the array of given IDs.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sync the joining table with the array of given IDs.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ids</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#144" title="Go to source code">insert</a>( <span><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>|array <var>$attributes</var></span>, <span>array <var>$joining</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Insert a new record for the association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Insert a new record for the association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code><code><a href="class-Laravel.Database.Eloquent.Model.html">Laravel\Database\Eloquent\Model</a></code>|array</code></dd>
+					<dt><var>$joining</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#176" title="Go to source code">delete</a>( )</code>
+
+		<div class="description short">
+			
+<p>Delete all of the records from the joining table for the model.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete all of the records from the joining table for the model.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="join_record" id="_join_record">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_join_record">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#186" title="Go to source code">join_record</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create an array representing a new joining record for the association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create an array representing a new joining record for the association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert_joining" id="_insert_joining">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert_joining">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#197" title="Go to source code">insert_joining</a>( <span>array <var>$attributes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Insert a new record into the joining table of the association.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Insert a new record into the joining table of the association.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joining_table" id="_joining_table">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			Query
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joining_table">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#215" title="Go to source code">joining_table</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get a fluent query for the joining table of the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a fluent query for the joining table of the relationship.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Query</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="constrain" id="_constrain">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_constrain">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#225" title="Go to source code">constrain</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set the proper constraints on the relationship table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the proper constraints on the relationship table.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_select" id="_set_select">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_select">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#239" title="Go to source code">set_select</a>( <span>string <var>$foreign</var></span>, <span>string <var>$other</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the SELECT clause on the query builder for the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the SELECT clause on the query builder for the relationship.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$other</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_join" id="_set_join">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_join">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#265" title="Go to source code">set_join</a>( <span>string <var>$other</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the JOIN clause on the query builder for the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the JOIN clause on the query builder for the relationship.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$other</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_where" id="_set_where">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_where">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#278" title="Go to source code">set_where</a>( <span>string <var>$foreign</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the WHERE clause on the query builder for the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the WHERE clause on the query builder for the relationship.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$foreign</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#291" title="Go to source code">initialize</a>( <span>array <var>&amp; $parents</var></span>, <span>string <var>$relationship</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize a relationship on an array of parent models.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize a relationship on an array of parent models.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$parents</var></dt>
+					<dd><code>array</code></dd>
+					<dt><var>$relationship</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="eagerly_constrain" id="_eagerly_constrain">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_eagerly_constrain">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#306" title="Go to source code">eagerly_constrain</a>( <span>array <var>$results</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the proper constraints on the relationship table for an eager load.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the proper constraints on the relationship table for an eager load.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="match" id="_match">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_match">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#317" title="Go to source code">match</a>( <span>array <var>$relationship</var></span>, <span>array <var>&amp; $parents</var></span>, <span> <var>$children</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Match eagerly loaded child models to their parent models.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Match eagerly loaded child models to their parent models.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationship</var></dt>
+					<dd><code>array</code><br>$parents</dd>
+					<dt><var>$parents</var></dt>
+					<dd><code>array</code><br>$children</dd>
+					<dt><var>$children</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hydrate_pivot" id="_hydrate_pivot">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hydrate_pivot">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#339" title="Go to source code">hydrate_pivot</a>( <span>array <var>&amp; $results</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Hydrate the Pivot model on an array of results.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Hydrate the Pivot model on an array of results.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="with" id="_with">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html">Laravel\Database\Eloquent\Relationships\Relationship</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_with">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#376" title="Go to source code">with</a>( <span>array <var>$columns</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the columns on the joining table that should be fetched.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the columns on the joining table that should be fetched.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columns</var></dt>
+					<dd><code>array</code><br>$column</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html">Laravel\Database\Eloquent\Relationships\Relationship</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pivot" id="_pivot">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many.html">Laravel\Database\Eloquent\Relationships\Has_Many</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pivot">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#396" title="Go to source code">pivot</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get a relationship instance of the pivot table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a relationship instance of the pivot table.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Database.Eloquent.Relationships.Has_Many.html">Laravel\Database\Eloquent\Relationships\Has_Many</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="other_key" id="_other_key">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_other_key">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#408" title="Go to source code">other_key</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the other or associated key for the relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the other or associated key for the relationship.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="associated_key" id="_associated_key">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_associated_key">#</a>
+		<code><a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#418" title="Go to source code">associated_key</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the fully qualified associated table's primary key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the fully qualified associated table's primary key.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#methods">Laravel\Database\Eloquent\Relationships\Relationship</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#_foreign">foreign()</a>, 
+<a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#_foreign_key">foreign_key()</a>, 
+<a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#_fresh_model">fresh_model()</a>, 
+<a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#_keys">keys()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Laravel.Database.Eloquent.Query.html#methods">Laravel\Database\Eloquent\Query</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Laravel.Database.Eloquent.Query.html#___call">__call()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_connection">connection()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_first">first()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_get">get()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_hydrate">hydrate()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_load">load()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_model_includes">model_includes()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_nested_includes">nested_includes()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_paginate">paginate()</a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#_table">table()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="joining" id="$joining">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#9" title="Go to source code"><var>$joining</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$joining" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The name of the intermediate, joining table.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The name of the intermediate, joining table.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="other" id="$other">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#16" title="Go to source code"><var>$other</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$other" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The other or "associated" key. This is the foreign key of the related
+model.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The other or "associated" key. This is the foreign key of the related
+model.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="with" id="$with">
+
+		<td class="attributes"><code>
+			
+			protected 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Database.Eloquent.Relationships.Has_Many_And_Belongs_To.html#23" title="Go to source code"><var>$with</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'id'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$with" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The columns on the joining table that should be fetched.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The columns on the joining table that should be fetched.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#properties">Laravel\Database\Eloquent\Relationships\Relationship</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Laravel.Database.Eloquent.Relationships.Relationship.html#$base"><var>$base</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Laravel.Database.Eloquent.Query.html#properties">Laravel\Database\Eloquent\Query</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Laravel.Database.Eloquent.Query.html#$includes"><var>$includes</var></a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#$model"><var>$model</var></a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#$passthru"><var>$passthru</var></a>, 
+<a href="class-Laravel.Database.Eloquent.Query.html#$table"><var>$table</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

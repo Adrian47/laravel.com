@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\Console\Input\Input - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Input.ArgvInput.html">ArgvInput</a></li>
+				<li><a href="class-Symfony.Component.Console.Input.ArrayInput.html">ArrayInput</a></li>
+				<li class="active"><a href="class-Symfony.Component.Console.Input.Input.html">Input</a></li>
+				<li><a href="class-Symfony.Component.Console.Input.InputArgument.html">InputArgument</a></li>
+				<li><a href="class-Symfony.Component.Console.Input.InputDefinition.html">InputDefinition</a></li>
+				<li><a href="class-Symfony.Component.Console.Input.InputOption.html">InputOption</a></li>
+				<li><a href="class-Symfony.Component.Console.Input.StringInput.html">StringInput</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.Console.Input.html" title="Summary of Symfony\Component\Console\Input"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Input</h1>
+
+	<div class="description">
+	
+<p>Input is the base class for all concrete Input classes.</p>
+
+<p>Three concrete classes are provided by default:</p>
+
+<ul>
+	<li><code>ArgvInput</code>: The input comes from the CLI arguments (argv)</li>
+
+	<li><code>StringInput</code>: The input is provided as a string</li>
+
+	<li><code>ArrayInput</code>: The input is provided as an array</li>
+</ul>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b>Symfony\Component\Console\Input\Input</b>			
+			 implements 
+				<a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a>
+			
+			
+		</dd>
+	</dl>
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Symfony.Component.Console.Input.ArgvInput.html">Symfony\Component\Console\Input\ArgvInput</a>, 
+			<a href="class-Symfony.Component.Console.Input.ArrayInput.html">Symfony\Component\Console\Input\ArrayInput</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Symfony.Component.Console.Input.StringInput.html">Symfony\Component\Console\Input\StringInput</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.Console.html">Console</a>\<a href="namespace-Symfony.Component.Console.Input.html">Input</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Input.Input.html#14" title="Go to source code">vendor/Symfony/Component/Console/Input/Input.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#32" title="Go to source code">__construct</a>( <span><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a> <var>$definition</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$definition</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code></code><br> A InputDefinition instance</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bind" id="_bind">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bind">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#47" title="Go to source code">bind</a>( <span><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a> <var>$definition</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Binds the current Input instance with the given arguments and options.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Binds the current Input instance with the given arguments and options.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$definition</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code></code><br> A InputDefinition instance</dd>
+				</dl></div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_bind">Symfony\Component\Console\Input\InputInterface::bind</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			
+			abstract protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#61" title="Go to source code">parse</a>( )</code>
+
+		<div class="description short">
+			
+<p>Processes command line arguments.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Processes command line arguments.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate" id="_validate">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#66" title="Go to source code">validate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Validates the input.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates the input.</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>When not enough arguments are given<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_validate">Symfony\Component\Console\Input\InputInterface::validate</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isInteractive" id="_isInteractive">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isInteractive">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#78" title="Go to source code">isInteractive</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks if the input is interactive.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if the input is interactive.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>Returns true if the input is interactive<br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_isInteractive">Symfony\Component\Console\Input\InputInterface::isInteractive</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setInteractive" id="_setInteractive">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setInteractive">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#88" title="Go to source code">setInteractive</a>( <span>Boolean <var>$interactive</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the input interactivity.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the input interactivity.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$interactive</var></dt>
+					<dd><code>Boolean</code><br> If the input should be interactive</dd>
+				</dl></div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_setInteractive">Symfony\Component\Console\Input\InputInterface::setInteractive</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArguments" id="_getArguments">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArguments">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#98" title="Go to source code">getArguments</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the argument values.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the argument values.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of argument values<br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_getArguments">Symfony\Component\Console\Input\InputInterface::getArguments</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArgument" id="_getArgument">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArgument">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#108" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the argument value for a given argument name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the argument value for a given argument name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The argument name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>The argument value<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>When argument given doesn't exist<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_getArgument">Symfony\Component\Console\Input\InputInterface::getArgument</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setArgument" id="_setArgument">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setArgument">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#126" title="Go to source code">setArgument</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets an argument value by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets an argument value by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The argument name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br> The argument value</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>When argument given doesn't exist<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_setArgument">Symfony\Component\Console\Input\InputInterface::setArgument</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasArgument" id="_hasArgument">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasArgument">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#143" title="Go to source code">hasArgument</a>( <span>string|integer <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns true if an InputArgument object exists by name or position.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if an InputArgument object exists by name or position.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string|integer</code><br> The InputArgument name or position</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the InputArgument object exists, false otherwise<br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_hasArgument">Symfony\Component\Console\Input\InputInterface::hasArgument</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOptions" id="_getOptions">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOptions">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#155" title="Go to source code">getOptions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the options values.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the options values.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of option values<br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_getOptions">Symfony\Component\Console\Input\InputInterface::getOptions</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOption" id="_getOption">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOption">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#165" title="Go to source code">getOption</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the option value for a given option name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the option value for a given option name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The option name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>The option value<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>When option given doesn't exist<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_getOption">Symfony\Component\Console\Input\InputInterface::getOption</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setOption" id="_setOption">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setOption">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#183" title="Go to source code">setOption</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets an option value by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets an option value by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The option name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br> The option value</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>When option given doesn't exist<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_setOption">Symfony\Component\Console\Input\InputInterface::setOption</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasOption" id="_hasOption">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasOption">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Input.Input.html#200" title="Go to source code">hasOption</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns true if an InputOption object exists by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if an InputOption object exists by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The InputOption name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the InputOption object exists, false otherwise<br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Input.InputInterface.html#_hasOption">Symfony\Component\Console\Input\InputInterface::hasOption</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Symfony.Component.Console.Input.InputInterface.html#methods">Symfony\Component\Console\Input\InputInterface</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Symfony.Component.Console.Input.InputInterface.html#_getFirstArgument">getFirstArgument()</a>, 
+<a href="class-Symfony.Component.Console.Input.InputInterface.html#_getParameterOption">getParameterOption()</a>, 
+<a href="class-Symfony.Component.Console.Input.InputInterface.html#_hasParameterOption">hasParameterOption()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="definition" id="$definition">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.Console.Input.Input.html#27" title="Go to source code"><var>$definition</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$definition" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="options" id="$options">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.Console.Input.Input.html#28" title="Go to source code"><var>$options</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$options" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="arguments" id="$arguments">
+
+		<td class="attributes"><code>
+			
+			protected 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.Console.Input.Input.html#29" title="Go to source code"><var>$arguments</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$arguments" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="interactive" id="$interactive">
+
+		<td class="attributes"><code>
+			
+			protected 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.Console.Input.Input.html#30" title="Go to source code"><var>$interactive</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$interactive" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

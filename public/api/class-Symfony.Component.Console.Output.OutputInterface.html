@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Interface Symfony\Component\Console\Output\OutputInterface - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Output.ConsoleOutput.html">ConsoleOutput</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.NullOutput.html">NullOutput</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.Output.html">Output</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.StreamOutput.html">StreamOutput</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Output.ConsoleOutputInterface.html">ConsoleOutputInterface</a></li>
+				<li class="active"><a href="class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.Console.Output.html" title="Summary of Symfony\Component\Console\Output"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Interface OutputInterface</h1>
+
+	<div class="description">
+	
+<p>OutputInterface is the interface implemented by all Output classes.</p>
+
+	</div>
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-Symfony.Component.Console.Output.ConsoleOutputInterface.html">Symfony\Component\Console\Output\ConsoleOutputInterface</a>, 
+			<a href="class-Symfony.Component.Console.Output.Output.html">Symfony\Component\Console\Output\Output</a>
+	</div>
+
+	<div>
+		<h4>Indirect known implementers</h4>
+			<a href="class-Symfony.Component.Console.Output.ConsoleOutput.html">Symfony\Component\Console\Output\ConsoleOutput</a>, 
+			<a href="class-Symfony.Component.Console.Output.NullOutput.html">Symfony\Component\Console\Output\NullOutput</a>, 
+			<a href="class-Symfony.Component.Console.Output.StreamOutput.html">Symfony\Component\Console\Output\StreamOutput</a>
+	</div>
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.Console.html">Console</a>\<a href="namespace-Symfony.Component.Console.Output.html">Output</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+				<b>Api</b>
+				<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#16" title="Go to source code">vendor/Symfony/Component/Console/Output/OutputInterface.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#33" title="Go to source code">write</a>( <span>string|array <var>$messages</var></span>, <span>Boolean <var>$newline</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Writes a message to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes a message to the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$messages</var></dt>
+					<dd><code>string|array</code><br> The message as an array of lines of a single string</dd>
+					<dt><var>$newline</var></dt>
+					<dd><code>Boolean</code><br> Whether to add a newline or not</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br> The type of output</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>When unknown output type is given<br />
+				</div>
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeln" id="_writeln">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeln">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#46" title="Go to source code">writeln</a>( <span>string|array <var>$messages</var></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Writes a message to the output and adds a newline at the end.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes a message to the output and adds a newline at the end.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$messages</var></dt>
+					<dd><code>string|array</code><br> The message as an array of lines of a single string</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br> The type of output</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVerbosity" id="_setVerbosity">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setVerbosity">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#56" title="Go to source code">setVerbosity</a>( <span>integer <var>$level</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the verbosity of the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the verbosity of the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$level</var></dt>
+					<dd><code>integer</code><br> The level of verbosity</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVerbosity" id="_getVerbosity">
+
+		<td class="attributes"><code>
+			
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVerbosity">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#65" title="Go to source code">getVerbosity</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the current verbosity of the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the current verbosity of the output.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>The current level of verbosity<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDecorated" id="_setDecorated">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDecorated">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#74" title="Go to source code">setDecorated</a>( <span>Boolean <var>$decorated</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the decorated flag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the decorated flag.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$decorated</var></dt>
+					<dd><code>Boolean</code><br> Whether to decorate the messages or not</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDecorated" id="_isDecorated">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDecorated">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#83" title="Go to source code">isDecorated</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the decorated flag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the decorated flag.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the output will decorate messages, false otherwise<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFormatter" id="_setFormatter">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFormatter">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#92" title="Go to source code">setFormatter</a>( <span><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a> <var>$formatter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets output formatter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets output formatter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$formatter</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code></code></dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFormatter" id="_getFormatter">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFormatter">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#101" title="Go to source code">getFormatter</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns current output formatter instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns current output formatter instance.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code></code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="VERBOSITY_QUIET" id="VERBOSITY_QUIET">
+
+		<td class="attributes"><code>
+			
+			integer
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#25" title="Go to source code"><b>VERBOSITY_QUIET</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#VERBOSITY_QUIET" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="VERBOSITY_NORMAL" id="VERBOSITY_NORMAL">
+
+		<td class="attributes"><code>
+			
+			integer
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#26" title="Go to source code"><b>VERBOSITY_NORMAL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#VERBOSITY_NORMAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="VERBOSITY_VERBOSE" id="VERBOSITY_VERBOSE">
+
+		<td class="attributes"><code>
+			
+			integer
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#27" title="Go to source code"><b>VERBOSITY_VERBOSE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#VERBOSITY_VERBOSE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="OUTPUT_NORMAL" id="OUTPUT_NORMAL">
+
+		<td class="attributes"><code>
+			
+			integer
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#29" title="Go to source code"><b>OUTPUT_NORMAL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#OUTPUT_NORMAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="OUTPUT_RAW" id="OUTPUT_RAW">
+
+		<td class="attributes"><code>
+			
+			integer
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#30" title="Go to source code"><b>OUTPUT_RAW</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#OUTPUT_RAW" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="OUTPUT_PLAIN" id="OUTPUT_PLAIN">
+
+		<td class="attributes"><code>
+			
+			integer
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Symfony.Component.Console.Output.OutputInterface.html#31" title="Go to source code"><b>OUTPUT_PLAIN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#OUTPUT_PLAIN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

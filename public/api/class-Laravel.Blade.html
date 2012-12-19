@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Blade - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
 
-	<title>Class Laravel\Blade</title>
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="resources/combined.js?2162224609"></script>
-	<script type="text/javascript" src="elementlist.js?3519551823"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1022895712" />
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
 
-</head>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
 
-<body>
-<div class="laravel-header">
-	<img src="http://beta.laravel.com/img/laravel.png" alt="" />
-</div>
-<div class="col-container">
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
 
-		<div id="groups">
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="active main"><a href="namespace-Laravel.html">Laravel</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.html">Cache</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.Drivers.html">Drivers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.html">CLI</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.Providers.html">Providers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Migrate.html">Migrate</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Session.html">Session</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Test.html">Test</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Database.html">Database</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Connectors.html">Connectors</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Database.Query.html">Query</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Query.Grammars.html">Grammars</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.html">Schema</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.Grammars.html">Grammars</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Routing.html">Routing</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Session.html">Session</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Session.Drivers.html">Drivers</a>
-						</li>
-							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
-				<li><a href="namespace-PHP.html">PHP</a>
-						</li>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
 			</ul>
-		</div>
 
 		<hr />
 
-		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Laravel.Asset.html">Asset</a></li>
@@ -114,6 +159,7 @@
 				<li><a href="class-Laravel.Memcached.html">Memcached</a></li>
 				<li><a href="class-Laravel.Messages.html">Messages</a></li>
 				<li><a href="class-Laravel.Paginator.html">Paginator</a></li>
+				<li><a href="class-Laravel.Pluralizer.html">Pluralizer</a></li>
 				<li><a href="class-Laravel.Redirect.html">Redirect</a></li>
 				<li><a href="class-Laravel.Redis.html">Redis</a></li>
 				<li><a href="class-Laravel.Request.html">Request</a></li>
@@ -131,37 +177,31 @@
 
 
 
-		</div>
-	</div>
-</div>
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
-	</form>
 
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-Laravel.html" title="Summary of Laravel"><span>Namespace</span></a>
-			</li>
-			<li class="active">
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.html" title="Summary of Laravel"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
 
 <div id="content" class="class">
 	<h1>Class Blade</h1>
@@ -185,6 +225,132 @@
 
 	<table class="summary" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="sharpen" id="_sharpen">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sharpen">#</a>
+		<code><a href="source-class-Laravel.Blade.html#39" title="Go to source code">sharpen</a>( )</code>
+
+		<div class="description short">
+			
+<p>Register the Blade view engine with Laravel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register the Blade view engine with Laravel.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extend" id="_extend">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extend">#</a>
+		<code><a href="source-class-Laravel.Blade.html#75" title="Go to source code">extend</a>( <span><a href="class-Closure.html">Closure</a> <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register a custom Blade compiler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register a custom Blade compiler.</p>
+
+<pre>
+Blade::extend(<span class="php-keyword1">function</span>(<span
+class="php-var">$view</span>)
+{
+<span class="php-keyword1">return</span> <span
+class="php-keyword2">str_replace</span>(<span
+class="php-quote">'foo'</span>, <span class="php-quote">'bar'</span>, <span
+class="php-var">$view</span>);
+});
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$compiler</var></dt>
+					<dd><code><code><a href="class-Closure.html">Closure</a></code></code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expired" id="_expired">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_expired">#</a>
+		<code><a href="source-class-Laravel.Blade.html#93" title="Go to source code">expired</a>( <span>string <var>$view</var></span>, <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine if a view is "expired" and needs to be re-compiled.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if a view is "expired" and needs to be re-compiled.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$view</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="compile" id="_compile">
 
 		<td class="attributes"><code>
@@ -197,7 +363,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile">#</a>
-		<code><a href="source-class-Laravel.Blade.html#20" title="Go to source code">compile</a>( <span>string <var>$path</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#106" title="Go to source code">compile</a>( <span>string <var>$view</var></span> )</code>
 
 		<div class="description short">
 			
@@ -213,8 +379,8 @@
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$path</var></dt>
-					<dd><code>string</code></dd>
+					<dt><var>$view</var></dt>
+					<dd><code>string</code><br>$path</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -239,7 +405,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_string">#</a>
-		<code><a href="source-class-Laravel.Blade.html#31" title="Go to source code">compile_string</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#117" title="Go to source code">compile_string</a>( <span>string <var>$value</var></span>, <span><code><a href="class-Laravel.View.html">Laravel\View</a></code> <var>$view</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -250,6 +416,136 @@
 		<div class="description detailed hidden">
 			
 <p>Compiles the given string containing Blade pseudo-code into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$view</var></dt>
+					<dd><code><code><a href="class-Laravel.View.html">Laravel\View</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_layouts" id="_compile_layouts">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_layouts">#</a>
+		<code><a href="source-class-Laravel.Blade.html#136" title="Go to source code">compile_layouts</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade "@layout" expressions into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade "@layout" expressions into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract" id="_extract">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract">#</a>
+		<code><a href="source-class-Laravel.Blade.html#167" title="Go to source code">extract</a>( <span>string <var>$value</var></span>, <span> <var>$expression</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Extract a variable value out of a Blade expression.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Extract a variable value out of a Blade expression.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$expression</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_comments" id="_compile_comments">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_comments">#</a>
+		<code><a href="source-class-Laravel.Blade.html#180" title="Go to source code">compile_comments</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade comments into PHP comments.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade comments into PHP comments.</p>
 
 
 
@@ -281,7 +577,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_echos">#</a>
-		<code><a href="source-class-Laravel.Blade.html#49" title="Go to source code">compile_echos</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#193" title="Go to source code">compile_echos</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -292,6 +588,132 @@
 		<div class="description detailed hidden">
 			
 <p>Rewrites Blade echo statements into PHP echo statements.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_forelse" id="_compile_forelse">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_forelse">#</a>
+		<code><a href="source-class-Laravel.Blade.html#204" title="Go to source code">compile_forelse</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade "for else" statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade "for else" statements into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_empty" id="_compile_empty">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_empty">#</a>
+		<code><a href="source-class-Laravel.Blade.html#238" title="Go to source code">compile_empty</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade "empty" statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade "empty" statements into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_endforelse" id="_compile_endforelse">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_endforelse">#</a>
+		<code><a href="source-class-Laravel.Blade.html#249" title="Go to source code">compile_endforelse</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade "forelse" endings into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade "forelse" endings into valid PHP.</p>
 
 
 
@@ -323,7 +745,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_structure_openings">#</a>
-		<code><a href="source-class-Laravel.Blade.html#60" title="Go to source code">compile_structure_openings</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#260" title="Go to source code">compile_structure_openings</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -365,7 +787,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_structure_closings">#</a>
-		<code><a href="source-class-Laravel.Blade.html#73" title="Go to source code">compile_structure_closings</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#273" title="Go to source code">compile_structure_closings</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -407,7 +829,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_else">#</a>
-		<code><a href="source-class-Laravel.Blade.html#86" title="Go to source code">compile_else</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#286" title="Go to source code">compile_else</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -418,6 +840,216 @@
 		<div class="description detailed hidden">
 			
 <p>Rewrites Blade else statements into PHP else statements.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_unless" id="_compile_unless">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_unless">#</a>
+		<code><a href="source-class-Laravel.Blade.html#297" title="Go to source code">compile_unless</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade "unless" statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade "unless" statements into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_endunless" id="_compile_endunless">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_endunless">#</a>
+		<code><a href="source-class-Laravel.Blade.html#310" title="Go to source code">compile_endunless</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade "unless" endings into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade "unless" endings into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_includes" id="_compile_includes">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_includes">#</a>
+		<code><a href="source-class-Laravel.Blade.html#321" title="Go to source code">compile_includes</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade @include statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade @include statements into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_render" id="_compile_render">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_render">#</a>
+		<code><a href="source-class-Laravel.Blade.html#334" title="Go to source code">compile_render</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade @render statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade @render statements into valid PHP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_render_each" id="_compile_render_each">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_render_each">#</a>
+		<code><a href="source-class-Laravel.Blade.html#347" title="Go to source code">compile_render_each</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade @render_each statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade @render_each statements into valid PHP.</p>
 
 
 
@@ -449,7 +1081,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_yields">#</a>
-		<code><a href="source-class-Laravel.Blade.html#97" title="Go to source code">compile_yields</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#360" title="Go to source code">compile_yields</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -481,6 +1113,43 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="compile_yield_sections" id="_compile_yield_sections">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_yield_sections">#</a>
+		<code><a href="source-class-Laravel.Blade.html#375" title="Go to source code">compile_yield_sections</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Rewrites Blade yield section statements into valid PHP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewrites Blade yield section statements into valid PHP.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="compile_section_start" id="_compile_section_start">
 
 		<td class="attributes"><code>
@@ -493,7 +1162,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_section_start">#</a>
-		<code><a href="source-class-Laravel.Blade.html#112" title="Go to source code">compile_section_start</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#387" title="Go to source code">compile_section_start</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -537,7 +1206,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compile_section_end">#</a>
-		<code><a href="source-class-Laravel.Blade.html#127" title="Go to source code">compile_section_end</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#402" title="Go to source code">compile_section_end</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -570,7 +1239,7 @@ method.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="matcher" id="_matcher">
+	<tr data-order="compile_extensions" id="_compile_extensions">
 
 		<td class="attributes"><code>
 			
@@ -581,8 +1250,50 @@ method.</p>
 		</td>
 
 		<td class="name"><div>
+		<a class="anchor" href="#_compile_extensions">#</a>
+		<code><a href="source-class-Laravel.Blade.html#415" title="Go to source code">compile_extensions</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Execute user defined compilers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute user defined compilers.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matcher" id="_matcher">
+
+		<td class="attributes"><code>
+			
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
 		<a class="anchor" href="#_matcher">#</a>
-		<code><a href="source-class-Laravel.Blade.html#140" title="Go to source code">matcher</a>( <span>string <var>$function</var></span> )</code>
+		<code><a href="source-class-Laravel.Blade.html#431" title="Go to source code">matcher</a>( <span>string <var>$function</var></span> )</code>
 
 		<div class="description short">
 			
@@ -600,6 +1311,48 @@ method.</p>
 				<div class="list"><dl>
 					<dt><var>$function</var></dt>
 					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compiled" id="_compiled">
+
+		<td class="attributes"><code>
+			
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compiled">#</a>
+		<code><a href="source-class-Laravel.Blade.html#442" title="Go to source code">compiled</a>( <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the fully qualified path for a compiled view.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the fully qualified path for a compiled view.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$view</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -634,11 +1387,23 @@ method.</p>
 				<a href="source-class-Laravel.Blade.html#5" title="Go to source code"><var>$compilers</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'extensions'</span>,
+	<span class="php-quote">'layouts'</span>,
+	<span class="php-quote">'comments'</span>,
 	<span class="php-quote">'echos'</span>,
+	<span class="php-quote">'forelse'</span>,
+	<span class="php-quote">'empty'</span>,
+	<span class="php-quote">'endforelse'</span>,
 	<span class="php-quote">'structure_openings'</span>,
 	<span class="php-quote">'structure_closings'</span>,
 	<span class="php-quote">'else'</span>,
+	<span class="php-quote">'unless'</span>,
+	<span class="php-quote">'endunless'</span>,
+	<span class="php-quote">'includes'</span>,
+	<span class="php-quote">'render_each'</span>,
+	<span class="php-quote">'render'</span>,
 	<span class="php-quote">'yields'</span>,
+	<span class="php-quote">'yield_sections'</span>,
 	<span class="php-quote">'section_start'</span>,
 	<span class="php-quote">'section_end'</span>,
 )</code></td>
@@ -659,36 +1424,70 @@ method.</p>
 			</div>
 		</div></td>
 	</tr>
+	<tr data-order="extensions" id="$extensions">
+
+		<td class="attributes"><code>
+			
+			protected static
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Blade.html#32" title="Go to source code"><var>$extensions</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$extensions" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>An array of user defined compilers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>An array of user defined compilers.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
 	</table>
 
 
 </div>
 
+				</div>
 
-</div>
-</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<ul class="span7">
-				<li><a href="http://beta.laravel.com/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="http://forums.laravel.com">Forums</a></li>
-				<li><a href="http://bundles.laravel.com">Bundles</a></li>
-				<li><a href="http://laravel.com/docs">Learn</a></li>
-				<li class="download">
-					<a href="http://laravel.com/download">Download <i class="download"></i></a>
-				</li>
-			</ul>
-			<ul class="social span3 offset2">
-				<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
-				<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
-			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-</body>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
 </html>

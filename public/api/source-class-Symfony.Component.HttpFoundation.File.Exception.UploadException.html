@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>File vendor/Symfony/Component/HttpFoundation/File/Exception/UploadException.php - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.File.Exception.AccessDeniedException.html">AccessDeniedException</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.File.Exception.FileException.html">FileException</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.File.Exception.FileNotFoundException.html">FileNotFoundException</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.File.Exception.UnexpectedTypeException.html">UnexpectedTypeException</a></li>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.File.Exception.UploadException.html">UploadException</a></li>
+			</ul>
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.File.Exception.html" title="Summary of Symfony\Component\HttpFoundation\File\Exception"><span>Namespace</span></a>
+							</li>
+							<li>
+								<a href="class-Symfony.Component.HttpFoundation.File.Exception.UploadException.html" title="Summary of Symfony\Component\HttpFoundation\File\Exception\UploadException"><span>Class</span></a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<pre><code><a href="#1" id="1" class="l"> 1: </a><span class="xlang">&lt;?php</span>
+<a href="#2" id="2" class="l"> 2: </a>
+<a href="#3" id="3" class="l"> 3: </a><span class="php-comment">/*
+</span><a href="#4" id="4" class="l"> 4: </a><span class="php-comment"> * This file is part of the Symfony package.
+</span><a href="#5" id="5" class="l"> 5: </a><span class="php-comment"> *
+</span><a href="#6" id="6" class="l"> 6: </a><span class="php-comment"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;
+</span><a href="#7" id="7" class="l"> 7: </a><span class="php-comment"> *
+</span><a href="#8" id="8" class="l"> 8: </a><span class="php-comment"> * For the full copyright and license information, please view the LICENSE
+</span><a href="#9" id="9" class="l"> 9: </a><span class="php-comment"> * file that was distributed with this source code.
+</span><a href="#10" id="10" class="l">10: </a><span class="php-comment"> */</span>
+<a href="#11" id="11" class="l">11: </a>
+<a href="#12" id="12" class="l">12: </a><span class="php-keyword1">namespace</span> Symfony\Component\HttpFoundation\<span class="php-keyword2">File</span>\Exception;
+<a href="#13" id="13" class="l">13: </a>
+<a href="#14" id="14" class="l">14: </a><span class="php-comment">/**
+</span><a href="#15" id="15" class="l">15: </a><span class="php-comment"> * Thrown when an error occurred during file upload
+</span><a href="#16" id="16" class="l">16: </a><span class="php-comment"> *
+</span><a href="#17" id="17" class="l">17: </a><span class="php-comment"> * @author Bernhard Schussek &lt;bernhard.schussek@symfony.com&gt;
+</span><a href="#18" id="18" class="l">18: </a><span class="php-comment"> */</span>
+<a href="#19" id="19" class="l">19: </a><span class="php-keyword1">class</span> UploadException <span class="php-keyword1">extends</span> FileException
+<a href="#20" id="20" class="l">20: </a>{
+<a href="#21" id="21" class="l">21: </a>}
+<a href="#22" id="22" class="l">22: </a></code></pre>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

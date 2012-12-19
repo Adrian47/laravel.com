@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Interface SessionHandlerInterface - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Create_Session_Table.html">Create_Session_Table</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__.html">__</a></li>
+				<li><a href="function-action.html">action</a></li>
+				<li><a href="function-array_divide.html">array_divide</a></li>
+				<li><a href="function-array_except.html">array_except</a></li>
+				<li><a href="function-array_first.html">array_first</a></li>
+				<li><a href="function-array_forget.html">array_forget</a></li>
+				<li><a href="function-array_get.html">array_get</a></li>
+				<li><a href="function-array_only.html">array_only</a></li>
+				<li><a href="function-array_pluck.html">array_pluck</a></li>
+				<li><a href="function-array_set.html">array_set</a></li>
+				<li><a href="function-array_strip_slashes.html">array_strip_slashes</a></li>
+				<li><a href="function-asset.html">asset</a></li>
+				<li><a href="function-class_basename.html">class_basename</a></li>
+				<li><a href="function-dd.html">dd</a></li>
+				<li><a href="function-e.html">e</a></li>
+				<li><a href="function-eloquent_to_json.html">eloquent_to_json</a></li>
+				<li><a href="function-ends_with.html">ends_with</a></li>
+				<li><a href="function-get_cli_option.html">get_cli_option</a></li>
+				<li><a href="function-has_php.html">has_php</a></li>
+				<li><a href="function-head.html">head</a></li>
+				<li><a href="function-magic_quotes.html">magic_quotes</a></li>
+				<li><a href="function-render.html">render</a></li>
+				<li><a href="function-render_each.html">render_each</a></li>
+				<li><a href="function-root_namespace.html">root_namespace</a></li>
+				<li><a href="function-route.html">route</a></li>
+				<li><a href="function-starts_with.html">starts_with</a></li>
+				<li><a href="function-str_contains.html">str_contains</a></li>
+				<li><a href="function-str_finish.html">str_finish</a></li>
+				<li><a href="function-str_object.html">str_object</a></li>
+				<li><a href="function-url.html">url</a></li>
+				<li><a href="function-value.html">value</a></li>
+				<li><a href="function-view.html">view</a></li>
+				<li><a href="function-with.html">with</a></li>
+				<li><a href="function-yield.html">yield</a></li>
+			</ul>
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Interface SessionHandlerInterface</h1>
+
+	<div class="description">
+	
+<p>SessionHandlerInterface</p>
+
+<p>Provides forward compatability with PHP 5.4</p>
+
+<p>Extensive documentation can be found at php.net, see links:</p>
+
+	</div>
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-Symfony.Component.HttpFoundation.Session.Storage.Handler.MemcachedSessionHandler.html">Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler</a>, 
+			<a href="class-Symfony.Component.HttpFoundation.Session.Storage.Handler.MemcacheSessionHandler.html">Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcacheSessionHandler</a>, 
+			<a href="class-Symfony.Component.HttpFoundation.Session.Storage.Handler.NullSessionHandler.html">Symfony\Component\HttpFoundation\Session\Storage\Handler\NullSessionHandler</a>, 
+			<a href="class-Symfony.Component.HttpFoundation.Session.Storage.Handler.PdoSessionHandler.html">Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler</a>, 
+			<a href="class-Symfony.Component.HttpFoundation.Session.Storage.Proxy.SessionHandlerProxy.html">Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		
+
+				<b>Author:</b>
+				Drak &lt;<a href="mailto:drak&#64;zikula.org">drak&#64;<!---->zikula.org</a>&gt;<br />
+				<b>See:</b>
+				<a
+href="http://php.net/sessionhandlerinterface">http://php.net/sessionhandlerinterface</a><br />
+				<b>See:</b>
+				<a
+href="http://php.net/session.customhandler">http://php.net/session.customhandler</a><br />
+				<b>See:</b>
+				<a
+href="http://php.net/session-set-save-handler">http://php.net/session-set-save-handler</a><br />
+		<b>Located at</b> <a href="source-class-SessionHandlerInterface.html#12" title="Go to source code">vendor/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="open" id="_open">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_open">#</a>
+		<code><a href="source-class-SessionHandlerInterface.html#27" title="Go to source code">open</a>( <span>string <var>$savePath</var></span>, <span>string <var>$sessionName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Open session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Open session.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savePath</var></dt>
+					<dd><code>string</code><br> Save path.</dd>
+					<dt><var>$sessionName</var></dt>
+					<dd><code>string</code><br> Session Name.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>If something goes wrong starting the session.<br />
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://php.net/sessionhandlerinterface.open">http://php.net/sessionhandlerinterface.open</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-SessionHandlerInterface.html#41" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			
+<p>Close session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Close session.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://php.net/sessionhandlerinterface.close">http://php.net/sessionhandlerinterface.close</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-SessionHandlerInterface.html#50" title="Go to source code">read</a>( <span> <var>$sessionId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Read session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read session.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>String as stored in persistent storage or empty string in all other cases.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>On fatal error but not "record not found".<br />
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://php.net/sessionhandlerinterface.read">http://php.net/sessionhandlerinterface.read</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-SessionHandlerInterface.html#61" title="Go to source code">write</a>( <span>string <var>$sessionId</var></span>, <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Commit session to storage.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Commit session to storage.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sessionId</var></dt>
+					<dd><code>string</code><br> Session ID.</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br> Session serialized data to save.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://php.net/sessionhandlerinterface.write">http://php.net/sessionhandlerinterface.write</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="destroy" id="_destroy">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_destroy">#</a>
+		<code><a href="source-class-SessionHandlerInterface.html#73" title="Go to source code">destroy</a>( <span>string <var>$sessionId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Destroys this session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Destroys this session.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sessionId</var></dt>
+					<dd><code>string</code><br> Session ID.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>On fatal error.<br />
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://php.net/sessionhandlerinterface.destroy">http://php.net/sessionhandlerinterface.destroy</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="gc" id="_gc">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_gc">#</a>
+		<code><a href="source-class-SessionHandlerInterface.html#86" title="Go to source code">gc</a>( <span>integer <var>$lifetime</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Garbage collection for storage.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Garbage collection for storage.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lifetime</var></dt>
+					<dd><code>integer</code><br> Max lifetime in seconds to keep sessions stored.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>On fatal error.<br />
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://php.net/sessionhandlerinterface.gc">http://php.net/sessionhandlerinterface.gc</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

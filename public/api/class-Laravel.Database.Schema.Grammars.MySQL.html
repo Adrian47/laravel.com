@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Database\Schema\Grammars\MySQL - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
 
-	<title>Class Laravel\Database\Schema\Grammars\MySQL</title>
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="resources/combined.js?2162224609"></script>
-	<script type="text/javascript" src="elementlist.js?3519551823"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1022895712" />
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
 
-</head>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
 
-<body>
-<div class="laravel-header">
-	<img src="http://beta.laravel.com/img/laravel.png" alt="" />
-</div>
-<div class="col-container">
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
 
-		<div id="groups">
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="active main"><a href="namespace-Laravel.html">Laravel</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.html">Cache</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.Drivers.html">Drivers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.html">CLI</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.Providers.html">Providers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Migrate.html">Migrate</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Session.html">Session</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Test.html">Test</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="active main"><a href="namespace-Laravel.Database.html">Database</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Connectors.html">Connectors</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Database.Query.html">Query</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Query.Grammars.html">Grammars</a>
-						</li>
-							</ul></li>
-				<li class="active main"><a href="namespace-Laravel.Database.Schema.html">Schema</a>
-						<span></span>
-						<ul>
-				<li class="active main"><a href="namespace-Laravel.Database.Schema.Grammars.html">Grammars</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Routing.html">Routing</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Session.html">Session</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Session.Drivers.html">Drivers</a>
-						</li>
-							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
-				<li><a href="namespace-PHP.html">PHP</a>
-						</li>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
 			</ul>
-		</div>
 
 		<hr />
 
-		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Laravel.Database.Schema.Grammars.Grammar.html">Grammar</a></li>
@@ -100,37 +145,31 @@
 
 
 
-		</div>
-	</div>
-</div>
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
-	</form>
 
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-Laravel.Database.Schema.Grammars.html" title="Summary of Laravel\Database\Schema\Grammars"><span>Namespace</span></a>
-			</li>
-			<li class="active">
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Database.Schema.Grammars.html" title="Summary of Laravel\Database\Schema\Grammars"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
 
 <div id="content" class="class">
 	<h1>Class MySQL</h1>
@@ -305,6 +344,50 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="unsigned" id="_unsigned">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unsigned">#</a>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#93" title="Go to source code">unsigned</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the SQL syntax for indicating if a column is unsigned.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the SQL syntax for indicating if a column is unsigned.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code><code><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a></code></code></dd>
+					<dt><var>$column</var></dt>
+					<dd><code><code><a href="class-Laravel.Fluent.html">Laravel\Fluent</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="nullable" id="_nullable">
 
 		<td class="attributes"><code>
@@ -317,7 +400,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_nullable">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#93" title="Go to source code">nullable</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#108" title="Go to source code">nullable</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -361,7 +444,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_defaults">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#105" title="Go to source code">defaults</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#120" title="Go to source code">defaults</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -405,7 +488,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_incrementer">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#120" title="Go to source code">incrementer</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#135" title="Go to source code">incrementer</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -449,7 +532,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_primary">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#135" title="Go to source code">primary</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#150" title="Go to source code">primary</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -493,7 +576,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_unique">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#147" title="Go to source code">unique</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#162" title="Go to source code">unique</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -537,7 +620,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_fulltext">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#159" title="Go to source code">fulltext</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#174" title="Go to source code">fulltext</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -581,7 +664,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_index">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#171" title="Go to source code">index</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#186" title="Go to source code">index</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -625,7 +708,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_key">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#183" title="Go to source code">key</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span>, <span>string <var>$type</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#198" title="Go to source code">key</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span>, <span>string <var>$type</var></span> )</code>
 
 		<div class="description short">
 			
@@ -671,7 +754,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#200" title="Go to source code">drop</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#215" title="Go to source code">drop</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -715,7 +798,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_column">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#212" title="Go to source code">drop_column</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#227" title="Go to source code">drop_column</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -759,7 +842,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_primary">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#235" title="Go to source code">drop_primary</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#250" title="Go to source code">drop_primary</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -803,7 +886,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_unique">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#247" title="Go to source code">drop_unique</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#262" title="Go to source code">drop_unique</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -847,7 +930,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_fulltext">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#259" title="Go to source code">drop_fulltext</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#274" title="Go to source code">drop_fulltext</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -891,7 +974,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_index">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#271" title="Go to source code">drop_index</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#286" title="Go to source code">drop_index</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -935,7 +1018,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_key">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#283" title="Go to source code">drop_key</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#298" title="Go to source code">drop_key</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			
@@ -967,6 +1050,50 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="drop_foreign" id="_drop_foreign">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_drop_foreign">#</a>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#310" title="Go to source code">drop_foreign</a>( <span><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a> <var>$table</var></span>, <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$command</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Drop a foreign key constraint from the table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Drop a foreign key constraint from the table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code><code><a href="class-Laravel.Database.Schema.Table.html">Laravel\Database\Schema\Table</a></code></code></dd>
+					<dt><var>$command</var></dt>
+					<dd><code><code><a href="class-Laravel.Fluent.html">Laravel\Fluent</a></code></code><br>$fluent</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="type_string" id="_type_string">
 
 		<td class="attributes"><code>
@@ -979,7 +1106,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_string">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#295" title="Go to source code">type_string</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#322" title="Go to source code">type_string</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1021,7 +1148,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_integer">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#306" title="Go to source code">type_integer</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#333" title="Go to source code">type_integer</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1063,7 +1190,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_float">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#317" title="Go to source code">type_float</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#344" title="Go to source code">type_float</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1074,6 +1201,48 @@
 		<div class="description detailed hidden">
 			
 <p>Generate the data-type definition for an integer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$column</var></dt>
+					<dd><code><code><a href="class-Laravel.Fluent.html">Laravel\Fluent</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="type_decimal" id="_type_decimal">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_type_decimal">#</a>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#355" title="Go to source code">type_decimal</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generate the data-type definintion for a decimal.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate the data-type definintion for a decimal.</p>
 
 
 
@@ -1105,7 +1274,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_boolean">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#328" title="Go to source code">type_boolean</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#366" title="Go to source code">type_boolean</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1147,7 +1316,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_date">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#339" title="Go to source code">type_date</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#377" title="Go to source code">type_date</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1189,7 +1358,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_timestamp">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#350" title="Go to source code">type_timestamp</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#388" title="Go to source code">type_timestamp</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1231,7 +1400,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_text">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#361" title="Go to source code">type_text</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#399" title="Go to source code">type_text</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1273,7 +1442,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_type_blob">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#372" title="Go to source code">type_blob</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Grammars.MySQL.html#410" title="Go to source code">type_blob</a>( <span><a href="class-Laravel.Fluent.html">Laravel\Fluent</a> <var>$column</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1309,6 +1478,8 @@
 	<caption>Methods inherited from <a href="class-Laravel.Database.Schema.Grammars.Grammar.html#methods">Laravel\Database\Schema\Grammars\Grammar</a></caption>
 	<tr>
 		<td><code>
+<a href="class-Laravel.Database.Schema.Grammars.Grammar.html#_drop_constraint">drop_constraint()</a>, 
+<a href="class-Laravel.Database.Schema.Grammars.Grammar.html#_foreign">foreign()</a>, 
 <a href="class-Laravel.Database.Schema.Grammars.Grammar.html#_type">type()</a>, 
 <a href="class-Laravel.Database.Schema.Grammars.Grammar.html#_wrap">wrap()</a>
 		</code></td>
@@ -1322,7 +1493,8 @@
 <a href="class-Laravel.Database.Grammar.html#_columnize">columnize()</a>, 
 <a href="class-Laravel.Database.Grammar.html#_parameter">parameter()</a>, 
 <a href="class-Laravel.Database.Grammar.html#_parameterize">parameterize()</a>, 
-<a href="class-Laravel.Database.Grammar.html#_wrap_table">wrap_table()</a>
+<a href="class-Laravel.Database.Grammar.html#_wrap_table">wrap_table()</a>, 
+<a href="class-Laravel.Database.Grammar.html#_wrap_value">wrap_value()</a>
 		</code></td>
 	</tr>
 	</table>
@@ -1376,31 +1548,36 @@
 
 </div>
 
+				</div>
 
-</div>
-</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<ul class="span7">
-				<li><a href="http://beta.laravel.com/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="http://forums.laravel.com">Forums</a></li>
-				<li><a href="http://bundles.laravel.com">Bundles</a></li>
-				<li><a href="http://laravel.com/docs">Learn</a></li>
-				<li class="download">
-					<a href="http://laravel.com/download">Download <i class="download"></i></a>
-				</li>
-			</ul>
-			<ul class="social span3 offset2">
-				<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
-				<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
-			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-</body>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
 </html>

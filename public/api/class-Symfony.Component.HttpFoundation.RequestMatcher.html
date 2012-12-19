@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\HttpFoundation\RequestMatcher - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.ApacheRequest.html">ApacheRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Cookie.html">Cookie</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.FileBag.html">FileBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.HeaderBag.html">HeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.JsonResponse.html">JsonResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.LaravelRequest.html">LaravelRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">ParameterBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RedirectResponse.html">RedirectResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Request.html">Request</a></li>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.RequestMatcher.html">RequestMatcher</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Response.html">Response</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ResponseHeaderBag.html">ResponseHeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ServerBag.html">ServerBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.StreamedResponse.html">StreamedResponse</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcherInterface.html">RequestMatcherInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.html" title="Summary of Symfony\Component\HttpFoundation"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class RequestMatcher</h1>
+
+	<div class="description">
+	
+<p>RequestMatcher compares a pre-defined set of checks against a Request
+instance.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b>Symfony\Component\HttpFoundation\RequestMatcher</b>			
+			 implements 
+				<a href="class-Symfony.Component.HttpFoundation.RequestMatcherInterface.html">Symfony\Component\HttpFoundation\RequestMatcherInterface</a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+				<b>Api</b>
+				<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#14" title="Go to source code">vendor/Symfony/Component/HttpFoundation/RequestMatcher.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#50" title="Go to source code">__construct</a>( <span> <var>$path</var> = <span class="php-keyword1">null</span></span>, <span> <var>$host</var> = <span class="php-keyword1">null</span></span>, <span> <var>$methods</var> = <span class="php-keyword1">null</span></span>, <span> <var>$ip</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$attributes</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matchHost" id="_matchHost">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_matchHost">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#59" title="Go to source code">matchHost</a>( <span>string <var>$regexp</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a check for the URL host name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a check for the URL host name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$regexp</var></dt>
+					<dd><code>string</code><br> A Regexp</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matchPath" id="_matchPath">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_matchPath">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#69" title="Go to source code">matchPath</a>( <span>string <var>$regexp</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a check for the URL path info.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a check for the URL path info.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$regexp</var></dt>
+					<dd><code>string</code><br> A Regexp</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matchIp" id="_matchIp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_matchIp">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#79" title="Go to source code">matchIp</a>( <span>string <var>$ip</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a check for the client IP.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a check for the client IP.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ip</var></dt>
+					<dd><code>string</code><br> A specific IP address or a range specified using IP/netmask like 192.168.1.0/24</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matchMethod" id="_matchMethod">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_matchMethod">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#89" title="Go to source code">matchMethod</a>( <span>string|array <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a check for the HTTP method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a check for the HTTP method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string|array</code><br> An HTTP method or an array of HTTP methods</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matchAttribute" id="_matchAttribute">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_matchAttribute">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#99" title="Go to source code">matchAttribute</a>( <span>string <var>$key</var></span>, <span>string <var>$regexp</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a check for request attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a check for request attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> The request attribute name</dd>
+					<dt><var>$regexp</var></dt>
+					<dd><code>string</code><br> A Regexp</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matches" id="_matches">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_matches">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#110" title="Go to source code">matches</a>( <span><a href="class-Symfony.Component.HttpFoundation.Request.html">Symfony\Component\HttpFoundation\Request</a> <var>$request</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Decides whether the rule(s) implemented by the strategy matches the supplied
+request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decides whether the rule(s) implemented by the strategy matches the supplied
+request.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.HttpFoundation.Request.html">Symfony\Component\HttpFoundation\Request</a></code></code><br> The request to check for a match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the request matches, false otherwise<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.HttpFoundation.RequestMatcherInterface.html#_matches">Symfony\Component\HttpFoundation\RequestMatcherInterface::matches</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkIp" id="_checkIp">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkIp">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#146" title="Go to source code">checkIp</a>( <span>string <var>$requestIp</var></span>, <span>string <var>$ip</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validates an IP address.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates an IP address.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestIp</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$ip</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True valid, false if not.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkIp4" id="_checkIp4">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkIp4">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#164" title="Go to source code">checkIp4</a>( <span>string <var>$requestIp</var></span>, <span>string <var>$ip</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validates an IPv4 address.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates an IPv4 address.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestIp</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$ip</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True valid, false if not.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkIp6" id="_checkIp6">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkIp6">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.RequestMatcher.html#188" title="Go to source code">checkIp6</a>( <span>string <var>$requestIp</var></span>, <span>string <var>$ip</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validates an IPv6 address.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates an IPv6 address.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestIp</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$ip</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True valid, false if not.<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						David Soria Parra &lt;dsp at php dot net&gt;<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<a href="https://github.com/dsp/v6tools">https://github.com/dsp/v6tools</a><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

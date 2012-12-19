@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Database\Schema\Table - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
 
-	<title>Class Laravel\Database\Schema\Table</title>
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="resources/combined.js?2162224609"></script>
-	<script type="text/javascript" src="elementlist.js?3519551823"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1022895712" />
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
 
-</head>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
 
-<body>
-<div class="laravel-header">
-	<img src="http://beta.laravel.com/img/laravel.png" alt="" />
-</div>
-<div class="col-container">
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
 
-		<div id="groups">
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="active main"><a href="namespace-Laravel.html">Laravel</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.html">Cache</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Cache.Drivers.html">Drivers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.html">CLI</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Bundle.Providers.html">Providers</a>
-						</li>
-							</ul></li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Migrate.html">Migrate</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Session.html">Session</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.CLI.Tasks.Test.html">Test</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="active main"><a href="namespace-Laravel.Database.html">Database</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Connectors.html">Connectors</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Database.Query.html">Query</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Query.Grammars.html">Grammars</a>
-						</li>
-							</ul></li>
-				<li class="active main"><a href="namespace-Laravel.Database.Schema.html">Schema</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Database.Schema.Grammars.html">Grammars</a>
-						</li>
-							</ul></li></ul></li>
-				<li class="main"><a href="namespace-Laravel.Routing.html">Routing</a>
-						</li>
-				<li class="main"><a href="namespace-Laravel.Session.html">Session</a>
-						<span></span>
-						<ul>
-				<li class="main"><a href="namespace-Laravel.Session.Drivers.html">Drivers</a>
-						</li>
-							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
-				<li><a href="namespace-PHP.html">PHP</a>
-						</li>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
 			</ul>
-		</div>
 
 		<hr />
 
-		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-Laravel.Database.Schema.Table.html">Table</a></li>
@@ -96,37 +141,31 @@
 
 
 
-		</div>
-	</div>
-</div>
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
-	</form>
 
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-Laravel.Database.Schema.html" title="Summary of Laravel\Database\Schema"><span>Namespace</span></a>
-			</li>
-			<li class="active">
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Database.Schema.html" title="Summary of Laravel\Database\Schema"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
 
 <div id="content" class="class">
 	<h1>Class Table</h1>
@@ -401,6 +440,46 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="foreign" id="_foreign">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_foreign">#</a>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#111" title="Go to source code">foreign</a>( <span>string|array <var>$columns</var></span>, <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Add a foreign key constraint to the table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add a foreign key constraint to the table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columns</var></dt>
+					<dd><code>string|array</code></dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="key" id="_key">
 
 		<td class="attributes"><code>
@@ -413,7 +492,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_key">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#111" title="Go to source code">key</a>( <span>string <var>$type</var></span>, <span>string|array <var>$columns</var></span>, <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#122" title="Go to source code">key</a>( <span>string <var>$type</var></span>, <span>string|array <var>$columns</var></span>, <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -459,7 +538,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#134" title="Go to source code">drop</a>( )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#145" title="Go to source code">drop</a>( )</code>
 
 		<div class="description short">
 			
@@ -496,7 +575,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_column">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#144" title="Go to source code">drop_column</a>( <span>string|array <var>$columns</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#155" title="Go to source code">drop_column</a>( <span>string|array <var>$columns</var></span> )</code>
 
 		<div class="description short">
 			
@@ -534,7 +613,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_primary">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#155" title="Go to source code">drop_primary</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#166" title="Go to source code">drop_primary</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -572,7 +651,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_unique">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#166" title="Go to source code">drop_unique</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#177" title="Go to source code">drop_unique</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -610,7 +689,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_fulltext">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#177" title="Go to source code">drop_fulltext</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#188" title="Go to source code">drop_fulltext</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -648,7 +727,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_index">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#188" title="Go to source code">drop_index</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#199" title="Go to source code">drop_index</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -659,6 +738,44 @@
 		<div class="description detailed hidden">
 			
 <p>Drop an index from the table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="drop_foreign" id="_drop_foreign">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_drop_foreign">#</a>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#210" title="Go to source code">drop_foreign</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Drop a foreign key constraint from the table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Drop a foreign key constraint from the table.</p>
 
 
 
@@ -686,7 +803,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_drop_key">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#199" title="Go to source code">drop_key</a>( <span>string <var>$type</var></span>, <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#221" title="Go to source code">drop_key</a>( <span>string <var>$type</var></span>, <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -730,7 +847,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_increments">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#211" title="Go to source code">increments</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#233" title="Go to source code">increments</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -772,7 +889,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_string">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#222" title="Go to source code">string</a>( <span>string <var>$name</var></span>, <span>integer <var>$length</var> = <span class="php-num">200</span></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#244" title="Go to source code">string</a>( <span>string <var>$name</var></span>, <span>integer <var>$length</var> = <span class="php-num">200</span></span> )</code>
 
 		<div class="description short">
 			
@@ -816,7 +933,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_integer">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#234" title="Go to source code">integer</a>( <span>string <var>$name</var></span>, <span>boolean <var>$increment</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#256" title="Go to source code">integer</a>( <span>string <var>$name</var></span>, <span>boolean <var>$increment</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -860,7 +977,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_float">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#246" title="Go to source code">float</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#268" title="Go to source code">float</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -890,6 +1007,52 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="decimal" id="_decimal">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Laravel.Fluent.html">Laravel\Fluent</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_decimal">#</a>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#279" title="Go to source code">decimal</a>( <span>string <var>$name</var></span>, <span>integer <var>$precision</var></span>, <span>integer <var>$scale</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add a decimal column to the table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add a decimal column to the table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$precision</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$scale</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Laravel.Fluent.html">Laravel\Fluent</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="boolean" id="_boolean">
 
 		<td class="attributes"><code>
@@ -902,7 +1065,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_boolean">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#257" title="Go to source code">boolean</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#292" title="Go to source code">boolean</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -944,7 +1107,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_timestamps">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#268" title="Go to source code">timestamps</a>( )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#303" title="Go to source code">timestamps</a>( )</code>
 
 		<div class="description short">
 			
@@ -977,7 +1140,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_date">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#280" title="Go to source code">date</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#315" title="Go to source code">date</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1019,7 +1182,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_timestamp">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#291" title="Go to source code">timestamp</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#326" title="Go to source code">timestamp</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1061,7 +1224,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_text">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#302" title="Go to source code">text</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#337" title="Go to source code">text</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1103,7 +1266,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_blob">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#313" title="Go to source code">blob</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#348" title="Go to source code">blob</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1145,7 +1308,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_on">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#324" title="Go to source code">on</a>( <span>string <var>$connection</var></span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#359" title="Go to source code">on</a>( <span>string <var>$connection</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1183,7 +1346,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_creating">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#335" title="Go to source code">creating</a>( )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#370" title="Go to source code">creating</a>( )</code>
 
 		<div class="description short">
 			
@@ -1220,7 +1383,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_command">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#348" title="Go to source code">command</a>( <span>string <var>$type</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#383" title="Go to source code">command</a>( <span>string <var>$type</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -1264,7 +1427,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_column">#</a>
-		<code><a href="source-class-Laravel.Database.Schema.Table.html#364" title="Go to source code">column</a>( <span>string <var>$type</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-Laravel.Database.Schema.Table.html#399" title="Go to source code">column</a>( <span>string <var>$type</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -1456,31 +1619,36 @@
 
 </div>
 
+				</div>
 
-</div>
-</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<ul class="span7">
-				<li><a href="http://beta.laravel.com/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="http://forums.laravel.com">Forums</a></li>
-				<li><a href="http://bundles.laravel.com">Bundles</a></li>
-				<li><a href="http://laravel.com/docs">Learn</a></li>
-				<li class="download">
-					<a href="http://laravel.com/download">Download <i class="download"></i></a>
-				</li>
-			</ul>
-			<ul class="social span3 offset2">
-				<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
-				<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
-			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-</body>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
 </html>

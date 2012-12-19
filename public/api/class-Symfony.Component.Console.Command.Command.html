@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\Console\Command\Command - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Symfony.Component.Console.Command.Command.html">Command</a></li>
+				<li><a href="class-Symfony.Component.Console.Command.HelpCommand.html">HelpCommand</a></li>
+				<li><a href="class-Symfony.Component.Console.Command.ListCommand.html">ListCommand</a></li>
+			</ul>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.Console.Command.html" title="Summary of Symfony\Component\Console\Command"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Command</h1>
+
+	<div class="description">
+	
+<p>Base class for all commands.</p>
+
+	</div>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Symfony.Component.Console.Command.HelpCommand.html">Symfony\Component\Console\Command\HelpCommand</a>, 
+			<a href="class-Symfony.Component.Console.Command.ListCommand.html">Symfony\Component\Console\Command\ListCommand</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.Console.html">Console</a>\<a href="namespace-Symfony.Component.Console.Command.html">Command</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+				<b>Api</b>
+				<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Command.Command.html#22" title="Go to source code">vendor/Symfony/Component/Console/Command/Command.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#43" title="Go to source code">__construct</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The name of the command</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-LogicException.html">LogicException</a></code></code><br>When the command name is empty<br />
+				</div>
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ignoreValidationErrors" id="_ignoreValidationErrors">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ignoreValidationErrors">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#70" title="Go to source code">ignoreValidationErrors</a>( )</code>
+
+		<div class="description short">
+			
+<p>Ignores validation errors.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ignores validation errors.</p>
+
+<p>This is mainly useful for the help command.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setApplication" id="_setApplication">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setApplication">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#80" title="Go to source code">setApplication</a>( <span><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a> <var>$application</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the application instance for this command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the application instance for this command.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$application</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a></code></code><br> An Application instance</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHelperSet" id="_setHelperSet">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHelperSet">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#97" title="Go to source code">setHelperSet</a>( <span><a href="class-Symfony.Component.Console.Helper.HelperSet.html">Symfony\Component\Console\Helper\HelperSet</a> <var>$helperSet</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the helper set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the helper set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$helperSet</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Helper.HelperSet.html">Symfony\Component\Console\Helper\HelperSet</a></code></code><br> A HelperSet instance</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHelperSet" id="_getHelperSet">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Helper.HelperSet.html">Symfony\Component\Console\Helper\HelperSet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHelperSet">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#107" title="Go to source code">getHelperSet</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the helper set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the helper set.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Helper.HelperSet.html">Symfony\Component\Console\Helper\HelperSet</a></code></code><br>A HelperSet instance<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApplication" id="_getApplication">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getApplication">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#117" title="Go to source code">getApplication</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the application instance for this command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the application instance for this command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a></code></code><br>An Application instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEnabled" id="_isEnabled">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isEnabled">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#129" title="Go to source code">isEnabled</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the command is enabled or not in the current environment</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the command is enabled or not in the current environment</p>
+
+<p>Override this to check for x or y and return false if the command can not run
+properly under the current conditions.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configure" id="_configure">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configure">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#142" title="Go to source code">configure</a>( )</code>
+
+		<div class="description short">
+			
+<p>Configures the current command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configures the current command.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#149" title="Go to source code">execute</a>( <span><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a> <var>$input</var></span>, <span><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a> <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the current command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the current command.</p>
+
+<p>This method is not abstract because you can use this class as a concrete
+class. In this case, instead of defining the execute() method, you set the code
+to execute by passing a Closure to the setCode() method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code></code><br> An InputInterface instance</dd>
+					<dt><var>$output</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code></code><br> An OutputInterface instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>0 if everything went fine, or an error code<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-LogicException.html">LogicException</a></code></code><br>When this abstract method is not implemented<br />
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Symfony.Component.Console.Command.Command.html#_setCode">Symfony\Component\Console\Command\Command::setCode()</a></code></code><br />
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="interact" id="_interact">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_interact">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#170" title="Go to source code">interact</a>( <span><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a> <var>$input</var></span>, <span><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a> <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Interacts with the user.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Interacts with the user.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code></code><br> An InputInterface instance</dd>
+					<dt><var>$output</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code></code><br> An OutputInterface instance</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#180" title="Go to source code">initialize</a>( <span><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a> <var>$input</var></span>, <span><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a> <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initializes the command just after the input has been validated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes the command just after the input has been validated.</p>
+
+<p>This is mainly useful when a lot of commands extends one main command where
+some things need to be initialized based on the input arguments and options.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code></code><br> An InputInterface instance</dd>
+					<dt><var>$output</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code></code><br> An OutputInterface instance</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#193" title="Go to source code">run</a>( <span><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a> <var>$input</var></span>, <span><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a> <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Runs the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Runs the command.</p>
+
+<p>The code to execute is either defined directly with the setCode() method or
+by overriding the execute() method in a sub-class.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code></code><br> An InputInterface instance</dd>
+					<dt><var>$output</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code></code><br> An OutputInterface instance</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Symfony.Component.Console.Command.Command.html#_setCode">Symfony\Component\Console\Command\Command::setCode()</a></code></code><br />
+						<code><code><a href="class-Symfony.Component.Console.Command.Command.html#_execute">Symfony\Component\Console\Command\Command::execute()</a></code></code><br />
+				</div>
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCode" id="_setCode">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCode">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#240" title="Go to source code">setCode</a>( <span><a href="class-Closure.html">Closure</a> <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the code to execute when running this command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the code to execute when running this command.</p>
+
+<p>If this method is used, it overrides the code defined in the execute()
+method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd><code><code><a href="class-Closure.html">Closure</a></code></code><br> A \Closure</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Symfony.Component.Console.Command.Command.html#_execute">Symfony\Component\Console\Command\Command::execute()</a></code></code><br />
+				</div>
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDefinition" id="_setDefinition">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDefinition">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#279" title="Go to source code">setDefinition</a>( <span>array|<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code> <var>$definition</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets an array of argument and option instances.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets an array of argument and option instances.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$definition</var></dt>
+					<dd><code>array|<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code></code><br> An array of argument and option instances or a definition instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefinition" id="_getDefinition">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefinition">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#301" title="Go to source code">getDefinition</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the InputDefinition attached to this Command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the InputDefinition attached to this Command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code></code><br>An InputDefinition instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNativeDefinition" id="_getNativeDefinition">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNativeDefinition">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#313" title="Go to source code">getNativeDefinition</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the InputDefinition to be used to create XML and Text representations of
+this Command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the InputDefinition to be used to create XML and Text representations of
+this Command.</p>
+
+<p>Can be overridden to provide the original command representation when it
+would otherwise be changed by merging with the application InputDefinition.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code></code><br>An InputDefinition instance<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addArgument" id="_addArgument">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addArgument">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#326" title="Go to source code">addArgument</a>( <span>string <var>$name</var></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds an argument.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds an argument.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The argument name</dd>
+					<dt><var>$mode</var></dt>
+					<dd><code>integer</code><br> The argument mode: InputArgument::REQUIRED or InputArgument::OPTIONAL</dd>
+					<dt><var>$description</var></dt>
+					<dd><code>string</code><br> A description text</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br> The default value (for InputArgument::OPTIONAL mode only)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addOption" id="_addOption">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addOption">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#345" title="Go to source code">addOption</a>( <span>string <var>$name</var></span>, <span>string <var>$shortcut</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds an option.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds an option.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The option name</dd>
+					<dt><var>$shortcut</var></dt>
+					<dd><code>string</code><br> The shortcut (can be null)</dd>
+					<dt><var>$mode</var></dt>
+					<dd><code>integer</code><br> The option mode: One of the InputOption::VALUE_* constants</dd>
+					<dt><var>$description</var></dt>
+					<dd><code>string</code><br> A description text</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br> The default value (must be null for InputOption::VALUE_REQUIRED or
+InputOption::VALUE_NONE)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setName" id="_setName">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setName">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#365" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the name of the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the name of the command.</p>
+
+<p>This method can set both the namespace and the name if you separate them by a
+colon (:)</p>
+
+<p>$command-&gt;setName('foo:bar');</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The command name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>When command name given is empty<br />
+				</div>
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getName">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#390" title="Go to source code">getName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the command name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the command name.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The command name<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDescription" id="_setDescription">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDescription">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#402" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the description for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the description for the command.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$description</var></dt>
+					<dd><code>string</code><br> The description for the command</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDescription" id="_getDescription">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDescription">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#418" title="Go to source code">getDescription</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the description for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the description for the command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The description for the command<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHelp" id="_setHelp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHelp">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#430" title="Go to source code">setHelp</a>( <span>string <var>$help</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the help for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the help for the command.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$help</var></dt>
+					<dd><code>string</code><br> The help for the command</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHelp" id="_getHelp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHelp">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#446" title="Go to source code">getHelp</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the help for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the help for the command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The help for the command<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getProcessedHelp" id="_getProcessedHelp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getProcessedHelp">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#458" title="Go to source code">getProcessedHelp</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the processed help for the command replacing the %command.name% and
+%command.full_name% patterns with the real values dynamically.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the processed help for the command replacing the %command.name% and
+%command.full_name% patterns with the real values dynamically.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The processed help for the command<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAliases" id="_setAliases">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAliases">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#480" title="Go to source code">setAliases</a>( <span>array <var>$aliases</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the aliases for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the aliases for the command.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$aliases</var></dt>
+					<dd><code>array</code><br> An array of aliases for the command</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></code></code><br>The current instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAliases" id="_getAliases">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAliases">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#500" title="Go to source code">getAliases</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the aliases for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the aliases for the command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of aliases for the command<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSynopsis" id="_getSynopsis">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSynopsis">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#512" title="Go to source code">getSynopsis</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the synopsis for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the synopsis for the command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The synopsis<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHelper" id="_getHelper">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHelper">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#526" title="Go to source code">getHelper</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets a helper instance by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a helper instance by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br> The helper name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>The helper value<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if the helper is not defined<br />
+				</div>
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="asText" id="_asText">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_asText">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#542" title="Go to source code">asText</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a text representation of the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a text representation of the command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>A string representing the command<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="asXml" id="_asXml">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|<code><a href="class-DOMDocument.html">DOMDocument</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_asXml">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#569" title="Go to source code">asXml</a>( <span>Boolean <var>$asDom</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an XML representation of the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an XML representation of the command.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$asDom</var></dt>
+					<dd><code>Boolean</code><br> Whether to return a DOM or an XML string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|<code><a href="class-DOMDocument.html">DOMDocument</a></code></code><br>An XML string representing the command<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

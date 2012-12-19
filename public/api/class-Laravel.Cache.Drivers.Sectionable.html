@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Cache\Drivers\Sectionable - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Laravel.Cache.Drivers.APC.html">APC</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Database.html">Database</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Driver.html">Driver</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.File.html">File</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Memcached.html">Memcached</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Memory.html">Memory</a></li>
+				<li><a href="class-Laravel.Cache.Drivers.Redis.html">Redis</a></li>
+				<li class="active"><a href="class-Laravel.Cache.Drivers.Sectionable.html">Sectionable</a></li>
+			</ul>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Cache.Drivers.html" title="Summary of Laravel\Cache\Drivers"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Sectionable</h1>
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Laravel.Cache.Drivers.Driver.html">Laravel\Cache\Drivers\Driver</a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b>Laravel\Cache\Drivers\Sectionable</b>			
+			
+			
+		</dd>
+	</dl>
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Laravel.Cache.Drivers.Memcached.html">Laravel\Cache\Drivers\Memcached</a>, 
+			<a href="class-Laravel.Cache.Drivers.Memory.html">Laravel\Cache\Drivers\Memory</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-Laravel.html">Laravel</a>\<a href="namespace-Laravel.Cache.html">Cache</a>\<a href="namespace-Laravel.Cache.Drivers.html">Drivers</a><br />
+
+		<b>Located at</b> <a href="source-class-Laravel.Cache.Drivers.Sectionable.html#3" title="Go to source code">cache/drivers/sectionable.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="get_from_section" id="_get_from_section">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_from_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#19" title="Go to source code">get_from_section</a>( <span>string <var>$section</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieve a sectioned item from the cache driver.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieve a sectioned item from the cache driver.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="put_in_section" id="_put_in_section">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_put_in_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#32" title="Go to source code">put_in_section</a>( <span>string <var>$section</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>, <span>integer <var>$minutes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Write a sectioned item to the cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Write a sectioned item to the cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$minutes</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="forever_in_section" id="_forever_in_section">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_forever_in_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#46" title="Go to source code">forever_in_section</a>( <span>string <var>$section</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Write a sectioned item to the cache that lasts forever.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Write a sectioned item to the cache that lasts forever.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remember_in_section" id="_remember_in_section">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remember_in_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#59" title="Go to source code">remember_in_section</a>( <span>string <var>$section</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$default</var></span>, <span>integer <var>$minutes</var></span>, <span> <var>$function</var> = <span class="php-quote">'put'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get a sectioned item from the cache, or cache and return the default
+value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a sectioned item from the cache, or cache and return the default
+value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$minutes</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$function</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sear_in_section" id="_sear_in_section">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sear_in_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#75" title="Go to source code">sear_in_section</a>( <span>string <var>$section</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$default</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get a sectioned item from the cache, or cache the default value forever.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a sectioned item from the cache, or cache the default value forever.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="forget_in_section" id="_forget_in_section">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_forget_in_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#88" title="Go to source code">forget_in_section</a>( <span>string <var>$section</var></span>, <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete a sectioned item from the cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete a sectioned item from the cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="forget_section" id="_forget_section">
+
+		<td class="attributes"><code>
+			
+			abstract public 
+			integer|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_forget_section">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#100" title="Go to source code">forget_section</a>( <span>string <var>$section</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete an entire section from the cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete an entire section from the cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer|boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sectionable" id="_sectionable">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sectionable">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#108" title="Go to source code">sectionable</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Indicates if a key is sectionable.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Indicates if a key is sectionable.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sectioned" id="_sectioned">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sectioned">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#119" title="Go to source code">sectioned</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine if a key is sectioned.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if a key is sectioned.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-Laravel.Cache.Drivers.Sectionable.html#130" title="Go to source code">parse</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the section and key from a sectioned key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the section and key from a sectioned key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Laravel.Cache.Drivers.Driver.html#methods">Laravel\Cache\Drivers\Driver</a></caption>
+	<tr>
+		<td><code>
+<a href="class-Laravel.Cache.Drivers.Driver.html#_expiration">expiration()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_forget">forget()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_get">get()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_has">has()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_put">put()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_remember">remember()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_retrieve">retrieve()</a>, 
+<a href="class-Laravel.Cache.Drivers.Driver.html#_sear">sear()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="implicit" id="$implicit">
+
+		<td class="attributes"><code>
+			
+			public 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Cache.Drivers.Sectionable.html#5" title="Go to source code"><var>$implicit</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$implicit" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Indicates that section caching is implicit based on keys.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates that section caching is implicit based on keys.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="delimiter" id="$delimiter">
+
+		<td class="attributes"><code>
+			
+			public 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Cache.Drivers.Sectionable.html#12" title="Go to source code"><var>$delimiter</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'::'</span></code></td>
+		<td class="description"><div>
+			<a href="#$delimiter" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The implicit section key delimiter.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The implicit section key delimiter.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

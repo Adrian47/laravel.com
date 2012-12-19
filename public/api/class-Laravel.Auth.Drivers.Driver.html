@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Laravel\Auth\Drivers\Driver - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Laravel.Auth.Drivers.Driver.html">Driver</a></li>
+				<li><a href="class-Laravel.Auth.Drivers.Eloquent.html">Eloquent</a></li>
+				<li><a href="class-Laravel.Auth.Drivers.Fluent.html">Fluent</a></li>
+			</ul>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Laravel.Auth.Drivers.html" title="Summary of Laravel\Auth\Drivers"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Driver</h1>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Laravel.Auth.Drivers.Eloquent.html">Laravel\Auth\Drivers\Eloquent</a>, 
+			<a href="class-Laravel.Auth.Drivers.Fluent.html">Laravel\Auth\Drivers\Fluent</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-Laravel.html">Laravel</a>\<a href="namespace-Laravel.Auth.html">Auth</a>\<a href="namespace-Laravel.Auth.Drivers.html">Drivers</a><br />
+
+		<b>Located at</b> <a href="source-class-Laravel.Auth.Drivers.Driver.html#9" title="Go to source code">auth/drivers/driver.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#25" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Create a new login auth driver instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new login auth driver instance.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="guest" id="_guest">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_guest">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#46" title="Go to source code">guest</a>( )</code>
+
+		<div class="description short">
+			
+<p>Determine if the user of the application is not logged in.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if the user of the application is not logged in.</p>
+
+<p>This method is the inverse of the "check" method.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check" id="_check">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#58" title="Go to source code">check</a>( )</code>
+
+		<div class="description short">
+			
+<p>Determine if the user is logged in.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if the user is logged in.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="user" id="_user">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_user">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#68" title="Go to source code">user</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user of the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user of the application.</p>
+
+<p>If the user is a guest, null should be returned.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed|null</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="retrieve" id="_retrieve">
+
+		<td class="attributes"><code>
+			
+			abstract public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_retrieve">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#82" title="Go to source code">retrieve</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the a given application user by ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the a given application user by ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attempt" id="_attempt">
+
+		<td class="attributes"><code>
+			
+			abstract public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attempt">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#90" title="Go to source code">attempt</a>( <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Attempt to log a user into the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attempt to log a user into the application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arguments</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="login" id="_login">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_login">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#98" title="Go to source code">login</a>( <span>string <var>$token</var></span>, <span>boolean <var>$remember</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Login the user assigned to the given token.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Login the user assigned to the given token.</p>
+
+<p>The token is typically a numeric ID for the user.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$remember</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="logout" id="_logout">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_logout">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#118" title="Go to source code">logout</a>( )</code>
+
+		<div class="description short">
+			
+<p>Log the user out of the driver's auth context.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Log the user out of the driver's auth context.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="store" id="_store">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_store">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#132" title="Go to source code">store</a>( <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Store a user's token in the session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Store a user's token in the session.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remember" id="_remember">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remember">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#143" title="Go to source code">remember</a>( <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Store a user's token in a long-lived cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Store a user's token in a long-lived cookie.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="recall" id="_recall">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_recall">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#156" title="Go to source code">recall</a>( )</code>
+
+		<div class="description short">
+			
+<p>Attempt to find a "remember me" cookie for the user.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attempt to find a "remember me" cookie for the user.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|null</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookie" id="_cookie">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cookie">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#174" title="Go to source code">cookie</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$minutes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Store an authentication cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Store an authentication cookie.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$minutes</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="token" id="_token">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_token">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#194" title="Go to source code">token</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get session key name used to store the token.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get session key name used to store the token.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="recaller" id="_recaller">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_recaller">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#204" title="Go to source code">recaller</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the name used for the "remember me" cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the name used for the "remember me" cookie.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="name" id="_name">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_name">#</a>
+		<code><a href="source-class-Laravel.Auth.Drivers.Driver.html#214" title="Go to source code">name</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the name of the driver in a storage friendly format.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the name of the driver in a storage friendly format.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="user" id="$user">
+
+		<td class="attributes"><code>
+			
+			public 
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Auth.Drivers.Driver.html#11" title="Go to source code"><var>$user</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$user" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The user currently being managed by the driver.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The user currently being managed by the driver.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="token" id="$token">
+
+		<td class="attributes"><code>
+			
+			public 
+			string|null
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Laravel.Auth.Drivers.Driver.html#18" title="Go to source code"><var>$token</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$token" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The current value of the user's token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The current value of the user's token.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>

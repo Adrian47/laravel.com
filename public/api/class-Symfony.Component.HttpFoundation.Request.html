@@ -1,0 +1,3238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Class Symfony\Component\HttpFoundation\Request - Laravel API</title>
+		<meta name="description" content="Laravel is a clean and classy PHP framework with minimal configuration and expressive syntax. RESTful routing; ORM; beautiful code." />
+		<meta name="keywords" content="laravel, api, php framework, framework, restful routing, restful, clean php" />
+		<meta name="robots" content="index,follow" />
+		<meta name="application-name" content="Laravel" />
+		<link rel="author" href="/humans.txt" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="shortcut icon" href="resources/favicon.png" />
+
+		<!-- styles -->
+		<link href="resources/style.css" rel="stylesheet" type="text/css" />
+		<link href="resources/api.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://use.typekit.com/dlj4kfm.js"></script>
+		<script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+		<script type="text/javascript" src="resources/modernizr-2.5.2.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23865777-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container" style="width: auto;">
+							<h1><a href="http://laravel.com">Laravel</a></h1>
+
+							<div class="nav-collapse">
+								<ul class="nav pull-right">
+									<li><a href="http://laravel.com/">HOME</a></li>
+									<li><a href="http://laravel.com/about">ABOUT</a></li>
+									<li><a href="http://bundles.laravel.com">BUNDLES</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://laravel.com/docs">DOCUMENTATION</a></li>
+											<li><a href="http://screenr.com/user/laravel">SCREENCASTS</a></li>
+											<li class="divider"></li>
+											<li><a href="http://laravel.com/api">DEVELOPER API</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://forums.laravel.com">FORUMS</a></li>
+											<li><a href="http://laravel.com/irc">IRC</a></li>
+										</ul>
+									</li>
+									<li class="download"><a href="http://laravel.com/download">DOWNLOAD</a></li>
+								</ul>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</header>
+
+<div class="mid-content">
+	<div class="container main">
+		<div class="row">
+			<div class="sidebar span3">
+			<form method="get" action="http://www.google.com/search">
+				<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="laravel.com/api/" />
+				<input type="search" results="5" name="q" id="q" placeholder="Search the API" />
+			</form>
+
+			<h3>Namespaces</h3>
+			<ul>
+						<li><a href="namespace-Laravel.html">Laravel</a></li>
+						<li><a href="namespace-Laravel.Auth.html">Auth</a></li>
+						
+						<li><a href="namespace-Laravel.Cache.html">Cache</a></li>
+						
+						<li><a href="namespace-Laravel.CLI.html">CLI</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.html">Tasks</a></li>
+						<li><a href="namespace-Laravel.CLI.Tasks.Bundle.html">Bundle</a></li>
+						
+						
+						
+						
+						<li><a href="namespace-Laravel.Database.html">Database</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Eloquent.html">Eloquent</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Query.html">Query</a></li>
+						
+						<li><a href="namespace-Laravel.Database.Schema.html">Schema</a></li>
+						
+						
+						
+						<li><a href="namespace-Laravel.Session.html">Session</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.html">Symfony</a></li>
+						<li><a href="namespace-Symfony.Component.html">Component</a></li>
+						<li><a href="namespace-Symfony.Component.Console.html">Console</a></li>
+						
+						
+						
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a></li>
+						<li><a href="namespace-Symfony.Component.HttpFoundation.File.html">File</a></li>
+						
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.html">Session</a></li>
+						
+						
+						<li><a href="namespace-Symfony.Component.HttpFoundation.Session.Storage.html">Storage</a></li>
+						
+						
+			</ul>
+
+		<hr />
+
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.ApacheRequest.html">ApacheRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Cookie.html">Cookie</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.FileBag.html">FileBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.HeaderBag.html">HeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.JsonResponse.html">JsonResponse</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.LaravelRequest.html">LaravelRequest</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">ParameterBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RedirectResponse.html">RedirectResponse</a></li>
+				<li class="active"><a href="class-Symfony.Component.HttpFoundation.Request.html">Request</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcher.html">RequestMatcher</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.Response.html">Response</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ResponseHeaderBag.html">ResponseHeaderBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.ServerBag.html">ServerBag</a></li>
+				<li><a href="class-Symfony.Component.HttpFoundation.StreamedResponse.html">StreamedResponse</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.HttpFoundation.RequestMatcherInterface.html">RequestMatcherInterface</a></li>
+			</ul>
+
+
+
+
+
+
+
+			</div>
+			<div class="content docs span9">
+				<div class="well">
+					<div id="navigation">
+						<ul>
+							<li>
+								<a href="index.html" title="Overview"><span>Overview</span></a>
+							</li>
+							<li>
+								<a href="namespace-Symfony.Component.HttpFoundation.html" title="Summary of Symfony\Component\HttpFoundation"><span>Namespace</span></a>
+							</li>
+							<li class="active">
+<span>Class</span>							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+							</li>
+						</ul>
+						<ul>
+						</ul>
+	</div>					
+
+<div id="content" class="class">
+	<h1>Class Request</h1>
+
+	<div class="description">
+	
+<p>Request represents an HTTP request.</p>
+
+	</div>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Symfony.Component.HttpFoundation.ApacheRequest.html">Symfony\Component\HttpFoundation\ApacheRequest</a>, 
+			<a href="class-Symfony.Component.HttpFoundation.LaravelRequest.html">Symfony\Component\HttpFoundation\LaravelRequest</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.HttpFoundation.html">HttpFoundation</a><br />
+
+				<b>Author:</b>
+				Fabien Potencier &lt;<a
+href="mailto:fabien&#64;symfony.com">fabien&#64;<!---->symfony.com</a>&gt;<br />
+				<b>Api</b>
+				<br />
+		<b>Located at</b> <a href="source-class-Symfony.Component.HttpFoundation.Request.html#16" title="Go to source code">vendor/Symfony/Component/HttpFoundation/Request.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#146" title="Go to source code">__construct</a>( <span>array <var>$query</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$request</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$attributes</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$cookies</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$files</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$server</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd><code>array</code><br> The GET parameters</dd>
+					<dt><var>$request</var></dt>
+					<dd><code>array</code><br> The POST parameters</dd>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code><br> The request attributes (parameters parsed from the PATH_INFO, ...)</dd>
+					<dt><var>$cookies</var></dt>
+					<dd><code>array</code><br> The COOKIE parameters</dd>
+					<dt><var>$files</var></dt>
+					<dd><code>array</code><br> The FILES parameters</dd>
+					<dt><var>$server</var></dt>
+					<dd><code>array</code><br> The SERVER parameters</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br> The raw body data</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#164" title="Go to source code">initialize</a>( <span>array <var>$query</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$request</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$attributes</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$cookies</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$files</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$server</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the parameters for this request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the parameters for this request.</p>
+
+<p>This method also re-initializes all properties.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd><code>array</code><br> The GET parameters</dd>
+					<dt><var>$request</var></dt>
+					<dd><code>array</code><br> The POST parameters</dd>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code><br> The request attributes (parameters parsed from the PATH_INFO, ...)</dd>
+					<dt><var>$cookies</var></dt>
+					<dd><code>array</code><br> The COOKIE parameters</dd>
+					<dt><var>$files</var></dt>
+					<dd><code>array</code><br> The FILES parameters</dd>
+					<dt><var>$server</var></dt>
+					<dd><code>array</code><br> The SERVER parameters</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br> The raw body data</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFromGlobals" id="_createFromGlobals">
+
+		<td class="attributes"><code>
+			
+			 public static
+			<code><a href="class-Symfony.Component.HttpFoundation.Request.html">Symfony\Component\HttpFoundation\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFromGlobals">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#201" title="Go to source code">createFromGlobals</a>( )</code>
+
+		<div class="description short">
+			
+<p>Creates a new request with values from PHP's super globals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new request with values from PHP's super globals.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.HttpFoundation.Request.html">Symfony\Component\HttpFoundation\Request</a></code></code><br>A new request<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			
+			 public static
+			<code><a href="class-Symfony.Component.HttpFoundation.Request.html">Symfony\Component\HttpFoundation\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#222" title="Go to source code">create</a>( <span>string <var>$uri</var></span>, <span>string <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$cookies</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$files</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$server</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a Request based on a given URI and configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a Request based on a given URI and configuration.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uri</var></dt>
+					<dd><code>string</code><br> The URI</dd>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br> The HTTP method</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code><br> The request (GET) or query (POST) parameters</dd>
+					<dt><var>$cookies</var></dt>
+					<dd><code>array</code><br> The request cookies ($_COOKIE)</dd>
+					<dt><var>$files</var></dt>
+					<dd><code>array</code><br> The request files ($_FILES)</dd>
+					<dt><var>$server</var></dt>
+					<dd><code>array</code><br> The server parameters ($_SERVER)</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br> The raw body data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.HttpFoundation.Request.html">Symfony\Component\HttpFoundation\Request</a></code></code><br>A Request instance<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="duplicate" id="_duplicate">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_duplicate">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#320" title="Go to source code">duplicate</a>( <span>array <var>$query</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$request</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$attributes</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$cookies</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$files</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$server</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Clones a request and overrides some of its parameters.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clones a request and overrides some of its parameters.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd><code>array</code><br> The GET parameters</dd>
+					<dt><var>$request</var></dt>
+					<dd><code>array</code><br> The POST parameters</dd>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code><br> The request attributes (parameters parsed from the PATH_INFO, ...)</dd>
+					<dt><var>$cookies</var></dt>
+					<dd><code>array</code><br> The COOKIE parameters</dd>
+					<dt><var>$files</var></dt>
+					<dd><code>array</code><br> The FILES parameters</dd>
+					<dt><var>$server</var></dt>
+					<dd><code>array</code><br> The SERVER parameters</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__clone" id="___clone">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___clone">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#367" title="Go to source code">__clone</a>( )</code>
+
+		<div class="description short">
+			
+<p>Clones the current request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clones the current request.</p>
+
+<p>Note that the session is not cloned as duplicated requests are most of the
+time sub-requests of the main one.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#384" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the request as a string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the request as a string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The request<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="overrideGlobals" id="_overrideGlobals">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_overrideGlobals">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#397" title="Go to source code">overrideGlobals</a>( )</code>
+
+		<div class="description short">
+			
+<p>Overrides the PHP global variables according to this request instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Overrides the PHP global variables according to this request instance.</p>
+
+<p>It overrides $_GET, $_POST, $_REQUEST, $_SERVER, $_COOKIE, and $_FILES.</p>
+
+
+
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trustProxyData" id="_trustProxyData">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trustProxyData">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#426" title="Go to source code">trustProxyData</a>( )</code>
+
+		<div class="description short">
+			
+<p>Trusts $_SERVER entries coming from proxies.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Trusts $_SERVER entries coming from proxies.</p>
+
+<p>You should only call this method if your application is hosted behind a
+reverse proxy that you manage.</p>
+
+
+
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isProxyTrusted" id="_isProxyTrusted">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isProxyTrusted">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#439" title="Go to source code">isProxyTrusted</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns true if $_SERVER entries coming from proxies are trusted, false
+otherwise.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if $_SERVER entries coming from proxies are trusted, false
+otherwise.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#450" title="Go to source code">get</a>( <span>string <var>$key</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span>, <span>type <var>$deep</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets a "parameter" value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a "parameter" value.</p>
+
+<p>This method is mainly useful for libraries that want to provide some
+flexibility.</p>
+
+<p>Order of precedence: GET, PATH, POST, COOKIE</p>
+
+<p>Avoid using this method in controllers:</p>
+
+<ul>
+	<li>slow</li>
+
+	<li>prefer to get from a "named" source</li>
+</ul>
+
+<p>It is better to explicity get request parameters from the appropriate public
+property instead (query, request, attributes, ...).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br> the key</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br> the default value</dd>
+					<dt><var>$deep</var></dt>
+					<dd><code>type</code><br> is parameter deep in multidimensional array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSession" id="_getSession">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Symfony.Component.HttpFoundation.Session.SessionInterface.html">Symfony\Component\HttpFoundation\Session\SessionInterface</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSession">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#476" title="Go to source code">getSession</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the Session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the Session.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.HttpFoundation.Session.SessionInterface.html">Symfony\Component\HttpFoundation\Session\SessionInterface</a></code>|null</code><br>The session<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasPreviousSession" id="_hasPreviousSession">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasPreviousSession">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#488" title="Go to source code">hasPreviousSession</a>( )</code>
+
+		<div class="description short">
+			
+<p>Whether the request contains a Session which was started in one of the
+previous requests.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Whether the request contains a Session which was started in one of the
+previous requests.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasSession" id="_hasSession">
+
+		<td class="attributes"><code>
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasSession">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#504" title="Go to source code">hasSession</a>( )</code>
+
+		<div class="description short">
+			
+<p>Whether the request contains a Session object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Whether the request contains a Session object.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSession" id="_setSession">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSession">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#516" title="Go to source code">setSession</a>( <span><a href="class-Symfony.Component.HttpFoundation.Session.SessionInterface.html">Symfony\Component\HttpFoundation\Session\SessionInterface</a> <var>$session</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the Session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the Session.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$session</var></dt>
+					<dd><code><code><a href="class-Symfony.Component.HttpFoundation.Session.SessionInterface.html">Symfony\Component\HttpFoundation\Session\SessionInterface</a></code></code><br> The Session</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientIp" id="_getClientIp">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientIp">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#528" title="Go to source code">getClientIp</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the client IP address.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the client IP address.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The client IP address<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getScriptName" id="_getScriptName">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getScriptName">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#550" title="Go to source code">getScriptName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns current script name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns current script name.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPathInfo" id="_getPathInfo">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPathInfo">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#562" title="Go to source code">getPathInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the path being requested relative to the executed script.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the path being requested relative to the executed script.</p>
+
+<p>The path info always starts with a /.</p>
+
+<p>Suppose this request is instantiated from /mysite on localhost:</p>
+
+<ul>
+	<li><a href="http://localhost/mysite">http://localhost/mysite</a> returns an
+	empty string</li>
+
+	<li><a href="http://localhost/mysite/about">http://localhost/mysite/about</a>
+	returns '/about'</li>
+
+	<li><a
+	href="http://localhost/mysite/about?var=1">http://localhost/mysite/about?var=1</a>
+	returns '/about'</li>
+</ul>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBasePath" id="_getBasePath">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBasePath">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#586" title="Go to source code">getBasePath</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the root path from which this request is executed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the root path from which this request is executed.</p>
+
+<p>Suppose that an index.php file instantiates this request object:</p>
+
+<ul>
+	<li><a href="http://localhost/index.php">http://localhost/index.php</a> returns
+	an empty string</li>
+
+	<li><a
+	href="http://localhost/index.php/page">http://localhost/index.php/page</a>
+	returns an empty string</li>
+
+	<li><a href="http://localhost/web/index.php">http://localhost/web/index.php</a>
+	return '/web'</li>
+</ul>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBaseUrl" id="_getBaseUrl">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBaseUrl">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#608" title="Go to source code">getBaseUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the root url from which this request is executed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the root url from which this request is executed.</p>
+
+<p>The base URL never ends with a /.</p>
+
+<p>This is similar to getBasePath(), except that it also includes the script
+filename (e.g. index.php) if one exists.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getScheme" id="_getScheme">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getScheme">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#629" title="Go to source code">getScheme</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the request's scheme.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the request's scheme.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPort" id="_getPort">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPort">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#641" title="Go to source code">getPort</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the port on which the request is made.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the port on which the request is made.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUser" id="_getUser">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUser">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#657" title="Go to source code">getUser</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the user.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the user.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|null</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPassword" id="_getPassword">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPassword">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#667" title="Go to source code">getPassword</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the password.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the password.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|null</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHttpHost" id="_getHttpHost">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHttpHost">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#677" title="Go to source code">getHttpHost</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the HTTP host being requested.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the HTTP host being requested.</p>
+
+<p>The port name will be appended to the host if it's non-standard.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestUri" id="_getRequestUri">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestUri">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#698" title="Go to source code">getRequestUri</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the requested URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the requested URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUri" id="_getUri">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUri">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#714" title="Go to source code">getUri</a>( )</code>
+
+		<div class="description short">
+			
+<p>Generates a normalized URI for the Request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates a normalized URI for the Request.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>A normalized URI for the Request<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Symfony.Component.HttpFoundation.Request.html#_getQueryString">Symfony\Component\HttpFoundation\Request::getQueryString()</a></code></code><br />
+				</div>
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUriForPath" id="_getUriForPath">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUriForPath">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#746" title="Go to source code">getUriForPath</a>( <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generates a normalized URI for the given path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates a normalized URI for the given path.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br> A path to use instead of the current one</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The normalized URI for the path<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQueryString" id="_getQueryString">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getQueryString">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#760" title="Go to source code">getQueryString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Generates the normalized query string for the Request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates the normalized query string for the Request.</p>
+
+<p>It builds a normalized query string, where keys/value pairs are alphabetized
+and have consistent escaping.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|null</code><br>A normalized query string for the Request<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSecure" id="_isSecure">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isSecure">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#794" title="Go to source code">isSecure</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the request is secure or not.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the request is secure or not.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHost" id="_getHost">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHost">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#812" title="Go to source code">getHost</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the host name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the host name.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMethod" id="_setMethod">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMethod">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#839" title="Go to source code">setMethod</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the request method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the request method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMethod" id="_getMethod">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMethod">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#852" title="Go to source code">getMethod</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the request method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the request method.</p>
+
+<p>The method is always an uppercased string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The request method<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMimeType" id="_getMimeType">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMimeType">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#873" title="Go to source code">getMimeType</a>( <span>string <var>$format</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the mime type associated with the format.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the mime type associated with the format.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$format</var></dt>
+					<dd><code>string</code><br> The format</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The associated mime type (null if not found)<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFormat" id="_getFormat">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFormat">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#891" title="Go to source code">getFormat</a>( <span>string <var>$mimeType</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the format associated with the mime type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the format associated with the mime type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mimeType</var></dt>
+					<dd><code>string</code><br> The associated mime type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The format (null if not found)<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFormat" id="_setFormat">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFormat">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#919" title="Go to source code">setFormat</a>( <span>string <var>$format</var></span>, <span>string|array <var>$mimeTypes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Associates a format with mime types.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Associates a format with mime types.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$format</var></dt>
+					<dd><code>string</code><br> The format</dd>
+					<dt><var>$mimeTypes</var></dt>
+					<dd><code>string|array</code><br> The associated mime types (the preferred one must be the first as it will be
+used as the content type)</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestFormat" id="_getRequestFormat">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestFormat">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#936" title="Go to source code">getRequestFormat</a>( <span>string <var>$default</var> = <span class="php-quote">'html'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the request format.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the request format.</p>
+
+<p>Here is the process to determine the format:</p>
+
+<ul>
+	<li>format defined by the user (with setRequestFormat())</li>
+
+	<li>_format request parameter</li>
+
+	<li>$default</li>
+</ul>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$default</var></dt>
+					<dd><code>string</code><br> The default format</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The request format<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRequestFormat" id="_setRequestFormat">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRequestFormat">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#960" title="Go to source code">setRequestFormat</a>( <span>string <var>$format</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the request format.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the request format.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$format</var></dt>
+					<dd><code>string</code><br> The request format.</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContentType" id="_getContentType">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContentType">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#972" title="Go to source code">getContentType</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the format associated with the request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the format associated with the request.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The format (null if no content type is present)<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDefaultLocale" id="_setDefaultLocale">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDefaultLocale">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#984" title="Go to source code">setDefaultLocale</a>( <span>string <var>$locale</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the default locale.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the default locale.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$locale</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLocale" id="_setLocale">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLocale">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#996" title="Go to source code">setLocale</a>( <span>string <var>$locale</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the locale.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the locale.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$locale</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLocale" id="_getLocale">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLocale">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1008" title="Go to source code">getLocale</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the locale.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the locale.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isMethodSafe" id="_isMethodSafe">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isMethodSafe">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1018" title="Go to source code">isMethodSafe</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the method is safe or not.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the method is safe or not.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContent" id="_getContent">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContent">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1030" title="Go to source code">getContent</a>( <span>Boolean <var>$asResource</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the request body content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the request body content.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$asResource</var></dt>
+					<dd><code>Boolean</code><br> If true, a resource will be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|resource</code><br>The request body content or a resource to read the body stream.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getETags" id="_getETags">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getETags">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1056" title="Go to source code">getETags</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the Etags.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the Etags.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>The entity tags<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNoCache" id="_isNoCache">
+
+		<td class="attributes"><code>
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isNoCache">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1066" title="Go to source code">isNoCache</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreferredLanguage" id="_getPreferredLanguage">
+
+		<td class="attributes"><code>
+			
+			 public 
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreferredLanguage">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1071" title="Go to source code">getPreferredLanguage</a>( <span>array <var>$locales</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the preferred language.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the preferred language.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$locales</var></dt>
+					<dd><code>array</code><br> An array of ordered available locales</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|null</code><br>The preferred locale<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLanguages" id="_getLanguages">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLanguages">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1097" title="Go to source code">getLanguages</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets a list of languages acceptable by the client browser.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a list of languages acceptable by the client browser.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Languages ordered in the user browser preferences<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCharsets" id="_getCharsets">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCharsets">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1139" title="Go to source code">getCharsets</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets a list of charsets acceptable by the client browser.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a list of charsets acceptable by the client browser.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>List of charsets in preferable order<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAcceptableContentTypes" id="_getAcceptableContentTypes">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAcceptableContentTypes">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1155" title="Go to source code">getAcceptableContentTypes</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets a list of content types acceptable by the client browser</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a list of content types acceptable by the client browser</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>List of content types in preferable order<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isXmlHttpRequest" id="_isXmlHttpRequest">
+
+		<td class="attributes"><code>
+			
+			 public 
+			Boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isXmlHttpRequest">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1171" title="Go to source code">isXmlHttpRequest</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns true if the request is a XMLHttpRequest.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if the request is a XMLHttpRequest.</p>
+
+<p>It works if your JavaScript library set an X-Requested-With HTTP header. It
+is known to work with Prototype, Mootools, jQuery.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Boolean</code><br>true if the request is an XMLHttpRequest, false otherwise<br />
+				</div>
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="splitHttpAcceptHeader" id="_splitHttpAcceptHeader">
+
+		<td class="attributes"><code>
+			
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_splitHttpAcceptHeader">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1186" title="Go to source code">splitHttpAcceptHeader</a>( <span>string <var>$header</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Splits an Accept-* HTTP header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Splits an Accept-* HTTP header.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br> Header to split</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Array indexed by the values of the Accept-* header in preferred order<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepareRequestUri" id="_prepareRequestUri">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepareRequestUri">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1228" title="Go to source code">prepareRequestUri</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepareBaseUrl" id="_prepareBaseUrl">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepareBaseUrl">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1256" title="Go to source code">prepareBaseUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Prepares the base URL.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepares the base URL.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepareBasePath" id="_prepareBasePath">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepareBasePath">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1322" title="Go to source code">prepareBasePath</a>( )</code>
+
+		<div class="description short">
+			
+<p>Prepares the base path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepares the base path.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>base path<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="preparePathInfo" id="_preparePathInfo">
+
+		<td class="attributes"><code>
+			
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_preparePathInfo">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1348" title="Go to source code">preparePathInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Prepares the path info.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepares the path info.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>path info<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeFormats" id="_initializeFormats">
+
+		<td class="attributes"><code>
+			
+			 protected static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeFormats">#</a>
+		<code><a href="source-class-Symfony.Component.HttpFoundation.Request.html#1378" title="Go to source code">initializeFormats</a>( )</code>
+
+		<div class="description short">
+			
+<p>Initializes HTTP request formats.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes HTTP request formats.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="trustProxy" id="$trustProxy">
+
+		<td class="attributes"><code>
+			
+			protected static
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#25" title="Go to source code"><var>$trustProxy</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$trustProxy" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="attributes" id="$attributes">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">Symfony\Component\HttpFoundation\ParameterBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#27" title="Go to source code"><var>$attributes</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$attributes" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="request" id="$request">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">Symfony\Component\HttpFoundation\ParameterBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#34" title="Go to source code"><var>$request</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$request" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="$query">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">Symfony\Component\HttpFoundation\ParameterBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#41" title="Go to source code"><var>$query</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$query" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="server" id="$server">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.ServerBag.html">Symfony\Component\HttpFoundation\ServerBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#48" title="Go to source code"><var>$server</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$server" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="files" id="$files">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.FileBag.html">Symfony\Component\HttpFoundation\FileBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#55" title="Go to source code"><var>$files</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$files" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookies" id="$cookies">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.ParameterBag.html">Symfony\Component\HttpFoundation\ParameterBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#62" title="Go to source code"><var>$cookies</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$cookies" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="headers" id="$headers">
+
+		<td class="attributes"><code>
+			
+			public 
+			<code><a href="class-Symfony.Component.HttpFoundation.HeaderBag.html">Symfony\Component\HttpFoundation\HeaderBag</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#69" title="Go to source code"><var>$headers</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="content" id="$content">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#76" title="Go to source code"><var>$content</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$content" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="languages" id="$languages">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#81" title="Go to source code"><var>$languages</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$languages" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="charsets" id="$charsets">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#86" title="Go to source code"><var>$charsets</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$charsets" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="acceptableContentTypes" id="$acceptableContentTypes">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#91" title="Go to source code"><var>$acceptableContentTypes</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$acceptableContentTypes" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="pathInfo" id="$pathInfo">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#96" title="Go to source code"><var>$pathInfo</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$pathInfo" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="requestUri" id="$requestUri">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#101" title="Go to source code"><var>$requestUri</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$requestUri" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="baseUrl" id="$baseUrl">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#106" title="Go to source code"><var>$baseUrl</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$baseUrl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="basePath" id="$basePath">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#111" title="Go to source code"><var>$basePath</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$basePath" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="method" id="$method">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#116" title="Go to source code"><var>$method</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$method" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="format" id="$format">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#121" title="Go to source code"><var>$format</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$format" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="session" id="$session">
+
+		<td class="attributes"><code>
+			
+			protected 
+			<code><a href="class-Symfony.Component.HttpFoundation.Session.SessionInterface.html">Symfony\Component\HttpFoundation\Session\SessionInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#126" title="Go to source code"><var>$session</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$session" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="locale" id="$locale">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#131" title="Go to source code"><var>$locale</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$locale" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="defaultLocale" id="$defaultLocale">
+
+		<td class="attributes"><code>
+			
+			protected 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#136" title="Go to source code"><var>$defaultLocale</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'en'</span></code></td>
+		<td class="description"><div>
+			<a href="#$defaultLocale" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="formats" id="$formats">
+
+		<td class="attributes"><code>
+			
+			protected static
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Symfony.Component.HttpFoundation.Request.html#141" title="Go to source code"><var>$formats</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$formats" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<ul class="span7">
+						<li><a href="http://laravel.com/">Home</a></li>
+						<li><a href="http://laravel.com/about">About</a></li>
+						<li><a href="http://forums.laravel.com">Forums</a></li>
+						<li><a href="http://bundles.laravel.com">Bundles</a></li>
+						<li><a href="http://laravel.com/docs">Learn</a></li>
+						<li class="download"><a href="http://laravel.com/download">Download <i class="download"></i></a></li>
+					</ul>
+					<ul class="social span3 offset2">
+						<li><a href="http://github.com/laravel"><i class="github"></i> GitHub</a></li>
+						<li><a href="http://twitter.com/laravelphp"><i class="twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="resources/jquery-1.7.1.min.js"><\/script>')</script>
+		<script src="resources/bootstrap.min.js"></script>
+		<script src="resources/main-min.js"></script>
+	</body>
+</html>
