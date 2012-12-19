@@ -53,6 +53,7 @@
 										<ul class="dropdown-menu">
 											<li><a href="<?php echo url('docs'); ?>">Documentation</a></li>
 											<li><a href="http://screenr.com/user/laravel">Screencasts</a></li>
+											<li><a href="http://leanpub.com/codehappy">Book</a></li>
 											<li class="divider"></li>
 											<li><a href="<?php echo url('api'); ?>">Developer API</a></li>
 										</ul>
