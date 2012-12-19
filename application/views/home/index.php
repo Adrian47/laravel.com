@@ -13,17 +13,6 @@
 	<div class="midcontent">
 		<div class="container">
 
-			<div class="screencast row">
-				<div class="video span5">
-					<iframe src="http://www.screenr.com/embed/Oijs" width="385" height="235"></iframe>
-				</div>
-				<div class="introduction span6">
-					<h3>DIVING INTO LARAVEL 3.0 - ROUTING</h3>
-					<p>In this screencast Taylor Otwell, the author of Laravel, covers the highlights of routing in Laravel 3.0
-					so you can get a glimpse of its simple and expressive syntax. This is a great place to start learning!</p>
-				</div>
-			</div>
-
 			<div class="boxes row">
 				<div class="span6">
 					<div class="documentation">
